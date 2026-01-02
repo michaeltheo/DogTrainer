@@ -1,0 +1,139 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "contact": "Contact",
+    "dogTraining": "Dog Training",
+    "dogSitting": "Dog Sitting",
+    "dogAdventures": "Dog Adventures"
+  },
+  "home": {
+    "title": "Professional Dog Training & Care Services",
+    "metaTitle": "Dog Trainer & Pet Care | Professional Services",
+    "metaDescription": "Expert dog training, sitting, and adventure services. Certified trainers with proven methods for behavior modification, obedience, and socialization.",
+    "hero": {
+      "title": "Transform Your Dog's Behavior",
+      "subtitle": "Professional training, caring sitting, and exciting adventures for your furry friend",
+      "cta": "Book a Consultation",
+      "ctaSecondary": "Learn More"
+    },
+    "features": {
+      "title": "Why Choose Us",
+      "certified": {
+        "title": "Certified Trainers",
+        "description": "Professional certification with years of experience"
+      },
+      "positive": {
+        "title": "Positive Methods",
+        "description": "Science-based, reward-driven training techniques"
+      },
+      "custom": {
+        "title": "Custom Programs",
+        "description": "Tailored solutions for your dog's unique needs"
+      },
+      "support": {
+        "title": "Ongoing Support",
+        "description": "Continued guidance after training completion"
+      }
+    }
+  },
+  "about": {
+    "title": "About Us",
+    "metaTitle": "About Our Dog Training Team | Certified Professionals",
+    "metaDescription": "Meet our team of certified dog trainers with 10+ years experience. Specializing in positive reinforcement and behavioral modification techniques.",
+    "intro": "Professional dog trainers dedicated to strengthening the bond between you and your pet",
+    "story": "With over a decade of experience, we've helped hundreds of dogs and their owners achieve harmony through positive training methods.",
+    "mission": {
+      "title": "Our Mission",
+      "description": "To create well-balanced, happy dogs through compassionate, evidence-based training methods that respect both dog and owner."
+    },
+    "approach": {
+      "title": "Our Approach",
+      "description": "We use positive reinforcement techniques backed by modern behavioral science to create lasting behavioral change."
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "metaTitle": "Dog Training Services | Training, Sitting & Adventures",
+    "metaDescription": "Comprehensive dog services including obedience training, behavioral modification, pet sitting, and outdoor adventures. Custom programs available.",
+    "training": {
+      "title": "Dog Training",
+      "metaTitle": "Professional Dog Training | Obedience & Behavior",
+      "metaDescription": "Expert dog training for puppies and adults. Obedience, behavior modification, socialization. Private and group sessions available.",
+      "description": "Comprehensive training programs for puppies and adult dogs",
+      "features": {
+        "obedience": "Basic & Advanced Obedience",
+        "behavior": "Behavior Modification",
+        "puppy": "Puppy Socialization",
+        "private": "Private & Group Sessions"
+      },
+      "cta": "Start Training"
+    },
+    "sitting": {
+      "title": "Dog Sitting",
+      "metaTitle": "Trusted Dog Sitting Services | Professional Pet Care",
+      "metaDescription": "Reliable dog sitting services with experienced professionals. Safe, comfortable home-away-from-home care for your pet. Daily updates included.",
+      "description": "Safe, comfortable care when you're away",
+      "features": {
+        "home": "Home Environment",
+        "updates": "Daily Photo Updates",
+        "experienced": "Experienced Caretakers",
+        "flexible": "Flexible Scheduling"
+      },
+      "cta": "Book Sitting"
+    },
+    "adventures": {
+      "title": "Dog Adventures",
+      "metaTitle": "Dog Adventure Services | Hiking & Outdoor Activities",
+      "metaDescription": "Exciting outdoor adventures for your dog. Group hikes, beach trips, and nature exploration. Exercise, socialization, and fun combined.",
+      "description": "Exciting outdoor experiences and socialization",
+      "features": {
+        "hiking": "Group Hiking Trips",
+        "beach": "Beach Adventures",
+        "socialization": "Safe Socialization",
+        "exercise": "Physical & Mental Exercise"
+      },
+      "cta": "Join Adventure"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "metaTitle": "Contact Us | Book Your Dog Training Consultation",
+    "metaDescription": "Get in touch for professional dog training, sitting, or adventure services. Free consultation available. Call or email us today.",
+    "subtitle": "Get in touch to discuss your dog's needs",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "dogName": "Dog's Name",
+      "service": "Service Interested In",
+      "message": "Tell us about your dog",
+      "submit": "Send Message",
+      "selectService": "Select a service"
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "hours": "Hours"
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "bookNow": "Book Now",
+    "getStarted": "Get Started",
+    "readMore": "Read More",
+    "imageAlt": {
+      "dogTraining": "Professional dog training session",
+      "dogSitting": "Happy dog in care",
+      "dogAdventure": "Dogs on outdoor adventure",
+      "hero": "Happy trained dog"
+    }
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "quickLinks": "Quick Links",
+    "followUs": "Follow Us"
+  }
+}
