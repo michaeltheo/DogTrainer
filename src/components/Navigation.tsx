@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/routing";
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Logo from "./Logo";
 import NavItem from "./NavItem";
 import MobileMenuButton from "./MobileMenuButton";
@@ -13,6 +13,7 @@ export default function Navigation() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = useMemo(() => [
     { href: "/", label: t("home") },
@@ -29,6 +30,15 @@ export default function Navigation() {
     { href: "/contact", label: t("contact") },
   ], [t]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const toggleMobileMenu = useCallback(() => {
     setMobileMenuOpen(prev => !prev);
   }, []);
@@ -38,7 +48,11 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50 min-w-[320px]">
+    <nav className={`shadow-md sticky top-0 z-50 min-w-[320px] transition-all duration-300 ${
+      isScrolled
+        ? "bg-white/80 backdrop-blur-md"
+        : "bg-white"
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 min-w-0">
           <div className="flex items-center min-w-0 shrink">
