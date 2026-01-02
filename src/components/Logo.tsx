@@ -6,7 +6,7 @@ const Logo = memo(() => {
   return (
     <Link
       href="/"
-      className="shrink-0 flex items-center"
+      className="flex items-center min-w-0"
       aria-label="Dog Trainer's - Home"
     >
       <Image
@@ -15,7 +15,6 @@ const Logo = memo(() => {
         width={180}
         height={50}
         priority
-        className="mr-2"
       />
     </Link>
   );

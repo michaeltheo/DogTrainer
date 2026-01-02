@@ -35,13 +35,13 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={`${geist.variable} antialiased`}>
+      <body className={`${geist.variable} antialiased min-w-80`}>
         <HeroUIProvider>
           <NextIntlClientProvider messages={messages}>
             <AOSInit />
-            <div className="flex flex-col min-h-screen">
+            <div className="flex flex-col min-h-screen min-w-80">
               <Navigation />
-              <main className="flex-grow">{children}</main>
+              <main className="grow min-w-80">{children}</main>
               <Footer />
             </div>
           </NextIntlClientProvider>

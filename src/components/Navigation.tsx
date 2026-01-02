@@ -38,15 +38,15 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className="bg-white shadow-md sticky top-0 z-50">
+    <nav className="bg-white shadow-md sticky top-0 z-50 min-w-[320px]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
+        <div className="flex justify-between items-center h-16 min-w-0">
+          <div className="flex items-center min-w-0 shrink">
             <Logo />
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-8">
+          <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-8 shrink-0">
             {navItems.map((item) => (
               <NavItem
                 key={item.href}
@@ -61,7 +61,7 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center md:hidden">
+          <div className="flex items-center md:hidden shrink-0">
             <MobileMenuButton
               isOpen={mobileMenuOpen}
               onClick={toggleMobileMenu}
