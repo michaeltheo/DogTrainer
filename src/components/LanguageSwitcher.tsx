@@ -2,7 +2,8 @@
 
 import { useLocale } from 'next-intl';
 import { usePathname, useRouter } from '@/i18n/routing';
-import { useState, useTransition } from 'react';
+import { useTransition } from 'react';
+import { Chip } from '@heroui/react';
 
 export default function LanguageSwitcher() {
   const locale = useLocale();
@@ -17,31 +18,37 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center gap-2 border border-gray-300 rounded-lg p-1">
-      <button
+    <div className="flex gap-2 items-center">
+      <Chip
+        as="button"
         onClick={() => switchLocale('en')}
-        disabled={isPending}
-        className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+        isDisabled={isPending}
+        variant={locale === 'en' ? 'solid' : 'flat'}
+        color={locale === 'en' ? 'secondary' : 'default'}
+        className={`cursor-pointer font-bold text-sm px-4 py-1 ${
           locale === 'en'
-            ? 'bg-blue-600 text-white'
-            : 'text-gray-700 hover:bg-gray-100'
+            ? 'bg-accent-500 text-white shadow-lg scale-110'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
         aria-label="Switch to English"
       >
         EN
-      </button>
-      <button
+      </Chip>
+      <Chip
+        as="button"
         onClick={() => switchLocale('el')}
-        disabled={isPending}
-        className={`px-3 py-1 rounded text-sm font-medium transition-colors ${
+        isDisabled={isPending}
+        variant={locale === 'el' ? 'solid' : 'flat'}
+        color={locale === 'el' ? 'secondary' : 'default'}
+        className={`cursor-pointer font-bold text-sm px-4 py-1 ${
           locale === 'el'
-            ? 'bg-blue-600 text-white'
-            : 'text-gray-700 hover:bg-gray-100'
+            ? 'bg-accent-500 text-white shadow-lg scale-110'
+            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
         }`}
         aria-label="Αλλαγή σε Ελληνικά"
       >
         ΕΛ
-      </button>
+      </Chip>
     </div>
   );
 }

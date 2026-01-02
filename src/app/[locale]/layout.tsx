@@ -1,10 +1,11 @@
-import {NextIntlClientProvider} from 'next-intl';
-import {getMessages} from 'next-intl/server';
-import {notFound} from 'next/navigation';
-import {routing} from '@/i18n/routing';
-import Navigation from '@/components/Navigation';
-import Footer from '@/components/Footer';
-import AOSInit from '@/components/AOSInit';
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation";
+import { routing } from "@/i18n/routing";
+import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
+import AOSInit from "@/components/AOSInit";
+import { HeroUIProvider } from "@/components/HeroUIProvider";
 import { Geist } from "next/font/google";
 import "../globals.css";
 
@@ -14,17 +15,17 @@ const geist = Geist({
 });
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({locale}));
+  return routing.locales.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
   children,
-  params
+  params,
 }: {
   children: React.ReactNode;
-  params: Promise<{locale: string}>;
+  params: Promise<{ locale: string }>;
 }) {
-  const {locale} = await params;
+  const { locale } = await params;
 
   if (!routing.locales.includes(locale as any)) {
     notFound();
@@ -35,16 +36,16 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={`${geist.variable} antialiased`}>
-        <NextIntlClientProvider messages={messages}>
-          <AOSInit />
-          <div className="flex flex-col min-h-screen">
-            <Navigation />
-            <main className="flex-grow">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </NextIntlClientProvider>
+        <HeroUIProvider>
+          <NextIntlClientProvider messages={messages}>
+            <AOSInit />
+            <div className="flex flex-col min-h-screen">
+              <Navigation />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </div>
+          </NextIntlClientProvider>
+        </HeroUIProvider>
       </body>
     </html>
   );

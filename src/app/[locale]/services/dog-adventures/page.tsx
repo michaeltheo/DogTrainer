@@ -33,7 +33,7 @@ export default async function DogAdventuresPage({params}: {params: Promise<{loca
         dangerouslySetInnerHTML={{__html: JSON.stringify(serviceSchema)}}
       />
 
-      <section className="bg-gradient-to-br from-purple-50 to-purple-100 py-16">
+      <section className="bg-gradient-to-br from-purple-200 to-primary-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">

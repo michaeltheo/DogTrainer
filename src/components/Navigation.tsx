@@ -31,7 +31,7 @@ export default function Navigation() {
         <div className="flex justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="flex-shrink-0 flex items-center">
-              <span className="text-2xl font-bold text-blue-600">
+              <span className="text-2xl font-bold text-primary-600">
                 🐕 DogTrainer
               </span>
             </Link>
@@ -43,10 +43,10 @@ export default function Navigation() {
               <div key={item.href} className="relative group">
                 <Link
                   href={item.href}
-                  className={`inline-flex items-center px-1 pt-1 text-sm font-medium transition-colors ${
+                  className={`inline-flex items-center px-5 py-2.5 text-sm font-bold rounded-full transition-all duration-200 ${
                     pathname === item.href
-                      ? 'text-blue-600 border-b-2 border-blue-600'
-                      : 'text-gray-700 hover:text-blue-600'
+                      ? 'text-white bg-primary-600 shadow-lg scale-105'
+                      : 'text-gray-700 hover:text-primary-800 hover:bg-primary-50'
                   }`}
                 >
                   {item.label}
@@ -57,13 +57,17 @@ export default function Navigation() {
                   )}
                 </Link>
                 {item.submenu && (
-                  <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
-                    <div className="py-1">
+                  <div className="absolute left-0 mt-2 w-56 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-white rounded-xl shadow-lg border border-primary-200">
+                    <div className="py-2">
                       {item.submenu.map((subitem) => (
                         <Link
                           key={subitem.href}
                           href={subitem.href}
-                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                          className={`block px-4 py-3 text-sm font-semibold rounded-lg mx-2 transition-colors ${
+                            pathname === subitem.href
+                              ? 'bg-primary-600 text-white shadow-md'
+                              : 'text-gray-700 hover:bg-primary-50 hover:text-primary-800'
+                          }`}
                         >
                           {subitem.label}
                         </Link>
@@ -80,7 +84,7 @@ export default function Navigation() {
           <div className="flex items-center md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-blue-600 hover:bg-gray-100"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-gray-700 hover:text-primary-700 hover:bg-primary-50 transition-colors"
               aria-label="Toggle menu"
             >
               <svg
@@ -108,10 +112,10 @@ export default function Navigation() {
               <div key={item.href}>
                 <Link
                   href={item.href}
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                  className={`block px-4 py-3 rounded-lg text-base font-bold transition-colors ${
                     pathname === item.href
-                      ? 'text-blue-600 bg-blue-50'
-                      : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                      ? 'text-white bg-primary-600 shadow-md'
+                      : 'text-gray-700 hover:text-primary-800 hover:bg-primary-50'
                   }`}
                   onClick={() => setMobileMenuOpen(false)}
                 >
@@ -123,7 +127,11 @@ export default function Navigation() {
                       <Link
                         key={subitem.href}
                         href={subitem.href}
-                        className="block px-3 py-2 rounded-md text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                        className={`block px-4 py-2 rounded-lg text-sm font-semibold transition-colors ${
+                          pathname === subitem.href
+                            ? 'bg-primary-600 text-white shadow-md'
+                            : 'text-gray-600 hover:text-primary-800 hover:bg-primary-50'
+                        }`}
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         {subitem.label}

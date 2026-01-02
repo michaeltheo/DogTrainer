@@ -71,7 +71,7 @@ export default async function ServicesPage({params}: {params: Promise<{locale: s
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
+      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
             {t('title')}

@@ -33,7 +33,7 @@ export default async function DogTrainingPage({params}: {params: Promise<{locale
         dangerouslySetInnerHTML={{__html: JSON.stringify(serviceSchema)}}
       />
 
-      <section className="bg-gradient-to-br from-blue-50 to-blue-100 py-16">
+      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right">
@@ -45,7 +45,7 @@ export default async function DogTrainingPage({params}: {params: Promise<{locale
               </p>
               <Link
                 href="/contact"
-                className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+                className="inline-block bg-accent-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-accent-600 transition-colors"
               >
                 {t('cta')}
               </Link>
@@ -72,8 +72,8 @@ export default async function DogTrainingPage({params}: {params: Promise<{locale
               t('features.puppy'),
               t('features.private'),
             ].map((feature, idx) => (
-              <div key={idx} className="flex items-start p-6 bg-blue-50 rounded-lg" data-aos="fade-up" data-aos-delay={idx * 100}>
-                <svg className="w-6 h-6 text-blue-600 mr-4 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div key={idx} className="flex items-start p-6 bg-primary-50 rounded-lg" data-aos="fade-up" data-aos-delay={idx * 100}>
+                <svg className="w-6 h-6 text-primary-600 mr-4 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                 </svg>
                 <span className="text-lg text-gray-800">{feature}</span>
