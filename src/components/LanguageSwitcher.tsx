@@ -1,54 +1,73 @@
-'use client';
+"use client";
 
-import { useLocale } from 'next-intl';
-import { usePathname, useRouter } from '@/i18n/routing';
-import { useTransition } from 'react';
-import { Chip } from '@heroui/react';
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "@/i18n/routing";
+import { memo, useCallback, useTransition } from "react";
 
-export default function LanguageSwitcher() {
+interface LanguageButtonProps {
+  isActive: boolean;
+  isPending: boolean;
+  onClick: () => void;
+  label: string;
+  ariaLabel: string;
+}
+
+const LanguageButton = memo(({ isActive, isPending, onClick, label, ariaLabel }: LanguageButtonProps) => {
+  return (
+    <button
+      onClick={onClick}
+      disabled={isPending}
+      className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all duration-200 ${
+        isActive
+          ? "text-black"
+          : "text-gray-600 hover:text-gray-800 hover:bg-gray-200"
+      }`}
+      aria-label={ariaLabel}
+    >
+      {label}
+    </button>
+  );
+});
+
+LanguageButton.displayName = "LanguageButton";
+
+const LanguageSwitcher = memo(() => {
   const locale = useLocale();
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  const switchLocale = (newLocale: string) => {
-    startTransition(() => {
-      router.replace(pathname, { locale: newLocale });
-    });
-  };
+  const handleLocaleChange = useCallback((newLocale: string) => {
+    if (locale !== newLocale) {
+      startTransition(() => {
+        router.replace(pathname, { locale: newLocale });
+      });
+    }
+  }, [locale, pathname, router]);
+
+  const handleEnglish = useCallback(() => handleLocaleChange("en"), [handleLocaleChange]);
+  const handleGreek = useCallback(() => handleLocaleChange("el"), [handleLocaleChange]);
 
   return (
-    <div className="flex gap-2 items-center">
-      <Chip
-        as="button"
-        onClick={() => switchLocale('en')}
-        isDisabled={isPending}
-        variant={locale === 'en' ? 'solid' : 'flat'}
-        color={locale === 'en' ? 'secondary' : 'default'}
-        className={`cursor-pointer font-bold text-sm px-4 py-1 ${
-          locale === 'en'
-            ? 'bg-accent-500 text-white shadow-lg scale-110'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-        aria-label="Switch to English"
-      >
-        EN
-      </Chip>
-      <Chip
-        as="button"
-        onClick={() => switchLocale('el')}
-        isDisabled={isPending}
-        variant={locale === 'el' ? 'solid' : 'flat'}
-        color={locale === 'el' ? 'secondary' : 'default'}
-        className={`cursor-pointer font-bold text-sm px-4 py-1 ${
-          locale === 'el'
-            ? 'bg-accent-500 text-white shadow-lg scale-110'
-            : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-        }`}
-        aria-label="Αλλαγή σε Ελληνικά"
-      >
-        ΕΛ
-      </Chip>
+    <div className="inline-flex items-center gap-1 rounded-lg p-1 border border-gray-200 w-auto">
+      <LanguageButton
+        isActive={locale === "en"}
+        isPending={isPending}
+        onClick={handleEnglish}
+        label="EN"
+        ariaLabel="Switch to English"
+      />
+      <LanguageButton
+        isActive={locale === "el"}
+        isPending={isPending}
+        onClick={handleGreek}
+        label="ΕΛ"
+        ariaLabel="Αλλαγή σε Ελληνικά"
+      />
     </div>
   );
-}
+});
+
+LanguageSwitcher.displayName = "LanguageSwitcher";
+
+export default LanguageSwitcher;
