@@ -163,6 +163,11 @@
       "description": "We serve the entire Thessaloniki region and suburbs with flexibility"
     }
   },
+  "cta": {
+    "title": "Ready to Get Started?",
+    "subtitle": "Contact us today to schedule an evaluation appointment for your dog at your location",
+    "button": "Book Appointment"
+  },
   "common": {
     "learnMore": "Learn More",
     "bookNow": "Book Now",
