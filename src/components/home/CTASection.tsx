@@ -22,7 +22,7 @@ const CTASection = memo(() => {
       <div className="absolute inset-0">
         <Image
           src="/dog_trainer_with_dog.jpg"
-          alt="Professional dog trainer with dog"
+          alt="Εκπαίδευση σκύλων και φύλαξη σκύλων Θεσσαλονίκη - Dog training and dog sitting services"
           fill
           className="object-cover"
           sizes="100vw"

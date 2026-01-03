@@ -30,6 +30,8 @@ export function generateMetadata({
     alternates: {
       canonical: canonicalUrl,
       languages: {
+        'en-US': `${DOMAIN}/en${path}`,
+        'el-GR': `${DOMAIN}/el${path}`,
         'en': `${DOMAIN}/en${path}`,
         'el': `${DOMAIN}/el${path}`,
         'x-default': `${DOMAIN}/el${path}`,

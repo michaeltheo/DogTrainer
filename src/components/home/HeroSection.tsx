@@ -13,7 +13,7 @@ const HeroSection = memo(() => {
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero-dog-background.jpg"
-          alt="Professional dog training in Thessaloniki"
+          alt="Επαγγελματική εκπαίδευση σκύλων Θεσσαλονίκη - Professional dog training Thessaloniki"
           fill
           priority
           quality={85}

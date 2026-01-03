@@ -97,7 +97,7 @@ const WhyChooseUsSection = memo(() => {
             <div className="relative h-100 md:h-125 lg:h-150 rounded-2xl overflow-hidden ">
               <Image
                 src="/dog_trainer_with_dog.jpg"
-                alt="Professional dog trainer with dog"
+                alt="Πιστοποιημένος εκπαιδευτής σκύλων Θεσσαλονίκη - Certified dog trainer with trained dog"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
