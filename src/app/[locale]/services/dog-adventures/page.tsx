@@ -6,11 +6,35 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'services.adventures'});
 
+  const keywords = locale === 'el' ? [
+    'περιπέτειες σκύλων',
+    'dog adventures',
+    'πεζοπορία με σκύλο',
+    'υπαίθριες δραστηριότητες σκύλων',
+    'ορειβασία με σκύλους',
+    'κοινωνικοποίηση σκύλων',
+    'ομαδικές βόλτες σκύλων',
+    'Θεσσαλονίκη',
+    'εκδρομές στην παραλία με σκύλο',
+    'άσκηση σκύλων',
+  ] : [
+    'dog adventures',
+    'dog hiking',
+    'outdoor dog activities',
+    'mountain hiking with dogs',
+    'dog socialization',
+    'group dog walks',
+    'Thessaloniki',
+    'beach trips for dogs',
+    'dog exercise',
+  ];
+
   return genMeta({
     title: t('metaTitle'),
     description: t('metaDescription'),
     locale,
     path: '/services/dog-adventures',
+    keywords,
   });
 }
 

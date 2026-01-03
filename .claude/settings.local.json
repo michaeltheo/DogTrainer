@@ -6,7 +6,8 @@
       "Bash(npm run dev:*)",
       "Bash(timeout /t 5)",
       "Bash(grep:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(ls:*)"
     ]
   }
 }

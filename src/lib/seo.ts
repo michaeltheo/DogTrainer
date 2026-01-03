@@ -6,6 +6,7 @@ export interface SEOConfig {
   locale: string;
   path: string;
   images?: { url: string; alt: string }[];
+  keywords?: string[];
 }
 
 const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || 'https://yourdomain.com';
@@ -15,7 +16,8 @@ export function generateMetadata({
   description,
   locale,
   path,
-  images = []
+  images = [],
+  keywords = []
 }: SEOConfig): Metadata {
   const alternateLocale = locale === 'en' ? 'el' : 'en';
   const canonicalUrl = `${DOMAIN}/${locale}${path}`;
@@ -24,6 +26,7 @@ export function generateMetadata({
   return {
     title,
     description,
+    keywords: keywords.length > 0 ? keywords.join(', ') : undefined,
     alternates: {
       canonical: canonicalUrl,
       languages: {
@@ -114,8 +117,8 @@ export function generateLocalBusinessSchema({
     } : undefined,
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 37.9838,
-      longitude: 23.7275,
+      latitude: 40.6401,
+      longitude: 22.9444,
     },
     aggregateRating: {
       '@type': 'AggregateRating',
@@ -126,8 +129,8 @@ export function generateLocalBusinessSchema({
       '@type': 'GeoCircle',
       geoMidpoint: {
         '@type': 'GeoCoordinates',
-        latitude: 37.9838,
-        longitude: 23.7275,
+        latitude: 40.6401,
+        longitude: 22.9444,
       },
       geoRadius: '50000',
     },
@@ -162,7 +165,7 @@ export function generateServiceSchema({
     },
     areaServed: {
       '@type': 'City',
-      name: locale === 'en' ? 'Athens' : 'Αθήνα',
+      name: locale === 'en' ? 'Thessaloniki' : 'Θεσσαλονίκη',
     },
     availableChannel: {
       '@type': 'ServiceChannel',

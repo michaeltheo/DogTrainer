@@ -6,11 +6,37 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'services.training'});
 
+  const keywords = locale === 'el' ? [
+    'εκπαίδευση σκύλων',
+    'εκπαίδευση σκύλων Θεσσαλονίκη',
+    'dog training',
+    'εκπαιδευτής σκύλων',
+    'υπακοή σκύλων',
+    'εκπαίδευση κουταβιών',
+    'τροποποίηση συμπεριφοράς σκύλων',
+    'επαγγελματική εκπαίδευση σκύλων',
+    'ιδιωτικά μαθήματα σκύλων',
+    'ομαδικά μαθήματα σκύλων',
+    'Θεσσαλονίκη',
+  ] : [
+    'dog training',
+    'dog training Thessaloniki',
+    'obedience training',
+    'puppy training',
+    'behavioral training',
+    'dog behavior modification',
+    'professional dog trainer',
+    'Thessaloniki',
+    'private dog training',
+    'group dog training',
+  ];
+
   return genMeta({
     title: t('metaTitle'),
     description: t('metaDescription'),
     locale,
     path: '/services/dog-training',
+    keywords,
   });
 }
 

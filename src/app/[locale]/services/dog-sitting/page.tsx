@@ -6,11 +6,35 @@ export async function generateMetadata({params}: {params: Promise<{locale: strin
   const {locale} = await params;
   const t = await getTranslations({locale, namespace: 'services.sitting'});
 
+  const keywords = locale === 'el' ? [
+    'φύλαξη σκύλων',
+    'dog sitting',
+    'φροντίδα σκύλων',
+    'φύλαξη κατοικιδίων',
+    'υπηρεσίες φροντίδας σκύλων',
+    'φύλαξη σκύλου στο σπίτι',
+    'Θεσσαλονίκη',
+    'dog walker',
+    'βόλτα σκύλου',
+    'επαγγελματική φύλαξη',
+  ] : [
+    'dog sitting',
+    'pet sitting',
+    'dog care',
+    'dog boarding',
+    'pet care services',
+    'home dog sitting',
+    'Thessaloniki',
+    'dog walker',
+    'professional pet sitter',
+  ];
+
   return genMeta({
     title: t('metaTitle'),
     description: t('metaDescription'),
     locale,
     path: '/services/dog-sitting',
+    keywords,
   });
 }
 
