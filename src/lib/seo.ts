@@ -216,3 +216,22 @@ export function generateBreadcrumbSchema(items: { name: string; url: string }[])
     })),
   };
 }
+
+export interface ItemListItem {
+  name: string;
+  description: string;
+}
+
+export function generateItemListSchema(items: ItemListItem[], name: string) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name,
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      description: item.description,
+    })),
+  };
+}

@@ -143,6 +143,26 @@
     "viewAll": "See all reviews on Google",
     "leaveReview": "or leave your own review"
   },
+  "whyChooseUs": {
+    "title": "Why Choose Us?",
+    "subtitle": "Your trusted choice for professional dog training and care",
+    "certified": {
+      "title": "Certified Trainers",
+      "description": "Formally trained with over 12 years of experience in dog training and care"
+    },
+    "positive": {
+      "title": "Positive Training Method",
+      "description": "We use positive reinforcement techniques backed by behavioral science"
+    },
+    "personalized": {
+      "title": "Personalized Approach",
+      "description": "Every dog is unique - we customize our programs to meet their specific needs"
+    },
+    "coverage": {
+      "title": "Coverage of Thessaloniki Areas",
+      "description": "We serve the entire Thessaloniki region and suburbs with flexibility"
+    }
+  },
   "common": {
     "learnMore": "Learn More",
     "bookNow": "Book Now",

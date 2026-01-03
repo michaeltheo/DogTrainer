@@ -7,6 +7,7 @@ import HeroSection from "@/components/home/HeroSection";
 import AboutSection from "@/components/home/AboutSection";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
+import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
 
 export async function generateMetadata({
   params,
@@ -26,6 +27,7 @@ export async function generateMetadata({
           "dog sitting",
           "βόλτα σκύλου",
           "περιπέτειες σκύλων",
+          "εκδρομές σκύλων",
           "εκπαίδευση κουταβιών",
           "υπακοή σκύλων",
           "συμπεριφορά σκύλων",
@@ -96,6 +98,9 @@ export default async function HomePage({
 
       {/* Testimonials Section - Google Reviews */}
       <TestimonialsSection />
+
+      {/* Why Choose Us Section - Key Features */}
+      <WhyChooseUsSection />
     </>
   );
 }
