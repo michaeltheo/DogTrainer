@@ -4,9 +4,11 @@ import { memo } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/routing";
 import { Card, CardBody, CardFooter, Divider, Button } from "@heroui/react";
+import Image from "next/image";
 
 interface ServiceCardProps {
-  icon: string;
+  image: string;
+  imageAlt: string;
   title: string;
   description: string;
   link: string;
@@ -14,11 +16,20 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = memo(
-  ({ icon, title, description, link, delay }: ServiceCardProps) => {
+  ({ image, imageAlt, title, description, link, delay }: ServiceCardProps) => {
+    const t = useTranslations("common");
+
     return (
       <Card className="h-full" data-aos="fade-up" data-aos-delay={delay}>
         <CardBody className="p-8 text-center">
-          <div className="text-6xl mb-6">{icon}</div>
+          <div className="relative w-32 h-32 mx-auto mb-6">
+            <Image
+              src={image}
+              alt={imageAlt}
+              fill
+              className="object-contain"
+            />
+          </div>
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             {title}
           </h3>
@@ -50,7 +61,7 @@ const ServiceCard = memo(
               </svg>
             }
           >
-            Learn More
+            {t("learnMore")}
           </Button>
         </CardFooter>
       </Card>
@@ -62,22 +73,26 @@ ServiceCard.displayName = "ServiceCard";
 
 const ServicesOverview = memo(() => {
   const t = useTranslations("home");
+  const tCommon = useTranslations("common");
 
   const services = [
     {
-      icon: "🏠",
+      image: "/dog-sitting.png",
+      imageAlt: tCommon("imageAlt.dogSitting"),
       title: t("services.sitting.title"),
       description: t("services.sitting.description"),
       link: "/services/dog-sitting",
     },
     {
-      icon: "🎓",
+      image: "/dog-training.png",
+      imageAlt: tCommon("imageAlt.dogTraining"),
       title: t("services.training.title"),
       description: t("services.training.description"),
       link: "/services/dog-training",
     },
     {
-      icon: "🏔️",
+      image: "/dog-adventure.png",
+      imageAlt: tCommon("imageAlt.dogAdventure"),
       title: t("services.adventures.title"),
       description: t("services.adventures.description"),
       link: "/services/dog-adventures",
