@@ -2,23 +2,24 @@
 
 import { memo } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const HeroSection = memo(() => {
   const t = useTranslations("home");
 
   return (
     <section className="relative min-h-150 md:min-h-175 lg:min-h-200 flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          backgroundImage: "url(/hero-dog-background.jpg)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        {/* Overlay for better text readability */}
+      {/* Background Image  */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/hero-dog-background.jpg"
+          alt="Professional dog training in Thessaloniki"
+          fill
+          priority
+          quality={85}
+          sizes="100vw"
+          className="object-cover"
+        />
         <div className="absolute inset-0 bg-linear-to-b from-black/30 via-transparent to-black/40" />
       </div>
 
