@@ -3,6 +3,7 @@ import { generateMetadata as genMeta, generateLocalBusinessSchema } from '@/lib/
 import HeroSection from '@/components/home/HeroSection';
 import AboutSection from '@/components/home/AboutSection';
 import ServicesOverview from '@/components/home/ServicesOverview';
+import TestimonialsSection from '@/components/home/TestimonialsSection';
 
 export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
   const {locale} = await params;
@@ -78,6 +79,9 @@ export default async function HomePage({params}: {params: Promise<{locale: strin
 
       {/* Services Overview - Dog Sitting | Dog Training | Dog Adventures */}
       <ServicesOverview />
+
+      {/* Testimonials Section - Google Reviews */}
+      <TestimonialsSection />
     </>
   );
 }

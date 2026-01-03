@@ -23,12 +23,7 @@ const ServiceCard = memo(
       <Card className="h-full" data-aos="fade-up" data-aos-delay={delay}>
         <CardBody className="p-8 text-center">
           <div className="relative w-32 h-32 mx-auto mb-6">
-            <Image
-              src={image}
-              alt={imageAlt}
-              fill
-              className="object-contain"
-            />
+            <Image src={image} alt={imageAlt} fill className="object-contain" />
           </div>
           <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
             {title}
@@ -100,7 +95,7 @@ const ServicesOverview = memo(() => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 md:py-24 bg-linear-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Title */}

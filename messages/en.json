@@ -133,6 +133,16 @@
       "hours": "Hours"
     }
   },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Real reviews from Google",
+    "loading": "Loading reviews...",
+    "reviews": "reviews",
+    "readMore": "Read more",
+    "showLess": "Show less",
+    "viewAll": "See all reviews on Google",
+    "leaveReview": "or leave your own review"
+  },
   "common": {
     "learnMore": "Learn More",
     "bookNow": "Book Now",
