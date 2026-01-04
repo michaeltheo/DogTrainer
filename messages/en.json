@@ -114,8 +114,74 @@
   },
   "services": {
     "title": "Our Services",
-    "metaTitle": "Dog Training Services | Training, Sitting & Adventures",
-    "metaDescription": "Comprehensive dog services including obedience training, behavioral modification, pet sitting, and outdoor adventures. Custom programs available.",
+    "metaTitle": "Dog Training & Care Services Thessaloniki | Professional Pet Services",
+    "metaDescription": "Professional dog training, nutrition advice, veterinary support, dog handling, dog walking, pet sitting services in Thessaloniki. Certified trainers with 12+ years experience.",
+    "hero": {
+      "title": "Care Services & Advice",
+      "subtitle": "We guide you with love and knowledge, helping you offer your dog the best possible care. Feel free to reach out for personalized advice!"
+    },
+    "additional": {
+      "title": "Care Services & Advice",
+      "subtitle": "Comprehensive support services for the daily care of your dog",
+      "nutrition": {
+        "title": "Nutrition & Treats",
+        "description": "We recommend the right food for your dog based on breed, weight, and age. Ideal portions and proper combination with treats for balanced nutrition."
+      },
+      "activities": {
+        "title": "Activities & Grooming",
+        "description": "From walks and play to specialized activities based on your dog's breed. We provide advice on coat care, hygiene, and grooming."
+      },
+      "training": {
+        "title": "Training & Dog Handling",
+        "description": "We offer guidance for participation in dog shows, as well as Dog Handling techniques for proper presentation. We also provide group classes for owners."
+      },
+      "guides": {
+        "title": "Guide Dogs & Specialized Support",
+        "description": "Training for the role and process of obtaining a Guide Dog, with certification and experience. Our team has success with certification in this field."
+      },
+      "veterinary": {
+        "title": "Veterinary Support & Wellness",
+        "description": "We connect you with experienced veterinarians and natural solutions for your dog's health. Topics include health, housing, vaccinations, and general wellness through physical activity."
+      },
+      "excursions": {
+        "title": "Excursions & Joint Activities",
+        "description": "Participate together in excursions and activities that enhance quality interaction with your dog in the most authentic environment — nature. Through their natural needs, bonds of trust and balance."
+      }
+    },
+    "main": {
+      "badge": "Main Services",
+      "title": "Our Main Services",
+      "subtitle": "Specialized training, sitting, and adventure services for your dog",
+      "learnMore": "Learn More",
+      "training": {
+        "title": "Dog Training",
+        "description": "Professional dog training using positive reinforcement methods. Training programs for puppies and adult dogs, dog handling, basic obedience, and advanced training.",
+        "feature1": "Basic & Advanced Obedience",
+        "feature2": "Behavior Modification & Dog Handling",
+        "feature3": "Puppy Socialization",
+        "feature4": "Private & Group Classes"
+      },
+      "sitting": {
+        "title": "Dog Sitting",
+        "description": "Reliable dog sitting and dog walking services with experienced professionals. Safe and comfortable care when you're away, with daily updates.",
+        "feature1": "Home Environment Sitting",
+        "feature2": "Daily Photos & Updates",
+        "feature3": "Experienced & Certified Caretakers",
+        "feature4": "Flexible Schedule & Dog Walking"
+      },
+      "adventures": {
+        "title": "Nature Adventures",
+        "description": "Exciting outdoor adventures and excursions with your dog. Group hikes, nature adventures, and socialization in a safe environment.",
+        "feature1": "Group Nature Hikes",
+        "feature2": "Adventures & Explorations",
+        "feature3": "Safe Socialization",
+        "feature4": "Physical & Mental Exercise"
+      }
+    },
+    "socialResponsibility": {
+      "title": "Social Responsibility",
+      "description": "A portion of our proceeds is donated to animal welfare organizations."
+    },
     "training": {
       "title": "Dog Training",
       "metaTitle": "Professional Dog Training | Obedience & Behavior",

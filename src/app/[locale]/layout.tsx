@@ -8,6 +8,7 @@ import AOSInit from "@/components/AOSInit";
 import { HeroUIProvider } from "@/components/HeroUIProvider";
 import { Geist } from "next/font/google";
 import "../globals.css";
+import CTASection from "@/components/home/CTASection";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -42,6 +43,7 @@ export default async function LocaleLayout({
             <div className="flex flex-col min-h-screen min-w-80">
               <Navigation />
               <main className="grow min-w-80">{children}</main>
+              <CTASection />
               <Footer />
             </div>
           </NextIntlClientProvider>
