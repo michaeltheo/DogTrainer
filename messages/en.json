@@ -171,7 +171,7 @@
       },
       "adventures": {
         "title": "Nature Adventures",
-        "description": "Exciting outdoor adventures and excursions with your dog. Group hikes, nature adventures, and socialization in a safe environment.",
+        "description": "Exciting nature adventures with your dog. Group hikes, beach, socialization in a safe environment with experienced guides.",
         "feature1": "Group Nature Hikes",
         "feature2": "Adventures & Explorations",
         "feature3": "Safe Socialization",
@@ -345,16 +345,83 @@
     },
     "adventures": {
       "title": "Dog Adventures",
-      "metaTitle": "Dog Adventure Services | Hiking & Outdoor Activities",
-      "metaDescription": "Exciting outdoor adventures for your dog. Group hikes, beach trips, and nature exploration. Exercise, socialization, and fun combined.",
-      "description": "Exciting outdoor experiences and socialization",
+      "metaTitle": "Dog Adventures Thessaloniki | Hiking & Nature Activities",
+      "metaDescription": "Exciting dog adventures in nature near Thessaloniki. Group hikes, beach trips, socialization. Safe activities with experienced guides.",
+      "description": "Nature adventures for happy dogs",
+      "hero": {
+        "title": "Dog Adventures in Nature",
+        "subtitle": "Exciting excursions and adventures in nature for your dog. Group hikes, exploration, exercise and socialization in a safe environment with experienced guides.",
+        "benefit1": "Group Hikes",
+        "benefit2": "Safe Socialization",
+        "benefit3": "Experienced Guides"
+      },
+      "types": {
+        "title": "Adventure Types",
+        "subtitle": "Variety of activities for every dog and owner",
+        "hiking": {
+          "title": "Nature Hikes",
+          "description": "Group hikes on safe trails with beautiful scenery. Exercise, exploration and fun.",
+          "feature1": "Safe trails near Thessaloniki",
+          "feature2": "Group outings every weekend",
+          "feature3": "Suitable for all ages"
+        },
+        "beach": {
+          "title": "Beach Adventures",
+          "description": "Fun in the sand and water. Perfect for summer days with your dog.",
+          "feature1": "Play in sand and water",
+          "feature2": "Swimming and exercise",
+          "feature3": "Socialization with other dogs"
+        },
+        "social": {
+          "title": "Group Meetups",
+          "description": "Organized dog meetups in parks and special areas for safe socialization.",
+          "feature1": "Supervised play",
+          "feature2": "Groups by size/age",
+          "feature3": "Develop social skills"
+        },
+        "training": {
+          "title": "Nature Training",
+          "description": "Combination of adventure and training. Teach your dog to respond in real situations.",
+          "feature1": "Commands in natural environment",
+          "feature2": "Distraction management",
+          "feature3": "Practical skill application"
+        }
+      },
+      "benefits": {
+        "badge": "The Benefits",
+        "title": "Why Adventures Are Important",
+        "description": "Nature adventures offer multiple benefits for your dog's physical and mental health. Exercise, socialization and exploring new environments are essential for a happy dog.",
+        "benefit1": "Physical exercise and muscle strengthening",
+        "benefit2": "Mental stimulation and stress reduction",
+        "benefit3": "Socialization with other dogs",
+        "benefit4": "Strengthening bond with owner"
+      },
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "subtitle": "Safety, experience and love for animals",
+        "safe": {
+          "title": "Safe Routes",
+          "description": "We carefully select safe locations suitable for dogs"
+        },
+        "locations": {
+          "title": "Beautiful Locations",
+          "description": "We explore the best places around Thessaloniki"
+        },
+        "groups": {
+          "title": "Small Groups",
+          "description": "Limited participants for personal attention"
+        },
+        "experienced": {
+          "title": "Experienced Guides",
+          "description": "Certified trainers with first aid knowledge"
+        }
+      },
       "features": {
         "hiking": "Group Hiking Trips",
         "beach": "Beach Adventures",
         "socialization": "Safe Socialization",
         "exercise": "Physical & Mental Exercise"
-      },
-      "cta": "Join Adventure"
+      }
     }
   },
   "contact": {
