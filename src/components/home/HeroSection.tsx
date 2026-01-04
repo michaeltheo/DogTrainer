@@ -31,12 +31,12 @@ const HeroSection = memo(() => {
           </h1>
 
           <div className="mb-8" data-aos="fade-up" data-aos-delay="200">
-            <p className="text-2xl md:text-3xl lg:text-4xl text-accent-400 font-bold mb-3 drop-shadow-lg">
+            <p className="text-2xl md:text-5xl text-orange-400 font-bold mb-3 drop-shadow-lg">
               {t("hero.cta")}
             </p>
             <a
               href="tel:6989835114"
-              className="text-2xl md:text-3xl lg:text-4xl font-bold text-white hover:text-accent-300 transition-colors drop-shadow-lg inline-block"
+              className="text-2xl md:text-5xl font-bold text-orange-400 hover:text-accent-300 transition-colors drop-shadow-lg inline-block"
             >
               {t("hero.phone")}
             </a>
