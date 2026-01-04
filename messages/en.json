@@ -163,7 +163,7 @@
       },
       "sitting": {
         "title": "Dog Sitting",
-        "description": "Reliable dog sitting and dog walking services with experienced professionals. Safe and comfortable care when you're away, with daily updates.",
+        "description": "Reliable dog sitting and dog walking with experienced professionals. Home environment, daily updates, flexible schedule for every need.",
         "feature1": "Home Environment Sitting",
         "feature2": "Daily Photos & Updates",
         "feature3": "Experienced & Certified Caretakers",
@@ -265,16 +265,83 @@
     },
     "sitting": {
       "title": "Dog Sitting",
-      "metaTitle": "Trusted Dog Sitting Services | Professional Pet Care",
-      "metaDescription": "Reliable dog sitting services with experienced professionals. Safe, comfortable home-away-from-home care for your pet. Daily updates included.",
-      "description": "Safe, comfortable care when you're away",
+      "metaTitle": "Professional Dog Sitting Thessaloniki | Dog Sitting & Pet Care",
+      "metaDescription": "Reliable dog sitting and dog walking services in Thessaloniki. Safe home-based care with experienced professionals, daily updates and photos. Available 24/7.",
+      "description": "Reliable care and sitting with love",
+      "hero": {
+        "title": "Professional Dog Sitting",
+        "subtitle": "We provide reliable dog sitting and dog walking services with experienced professionals. Your dog will feel at home with safety, love, and professional care.",
+        "benefit1": "Experienced Caretakers",
+        "benefit2": "Daily Updates",
+        "benefit3": "Available 24/7"
+      },
+      "services": {
+        "title": "Sitting Services",
+        "subtitle": "Specialized services tailored to your dog's needs",
+        "home": {
+          "title": "Home Sitting",
+          "description": "Your dog stays in a warm family environment with full care and attention.",
+          "feature1": "Warm family environment",
+          "feature2": "Full 24/7 care",
+          "feature3": "Daily photos & videos"
+        },
+        "daycare": {
+          "title": "Day Care",
+          "description": "Perfect for working owners. Your dog spends the day playing and socializing.",
+          "feature1": "Supervised play",
+          "feature2": "Socialization with other dogs",
+          "feature3": "Activities & exercise"
+        },
+        "extended": {
+          "title": "Extended Care",
+          "description": "For longer absences. Full care with regular updates on your dog's status.",
+          "feature1": "Multi-day care",
+          "feature2": "Regular updates & photos",
+          "feature3": "Maintaining your dog's routine"
+        },
+        "special": {
+          "title": "Special Needs",
+          "description": "Specialized care for dogs with special needs, seniors, or medical conditions.",
+          "feature1": "Medication administration",
+          "feature2": "Senior dog care",
+          "feature3": "Special diet & grooming"
+        }
+      },
+      "methods": {
+        "badge": "Our Approach",
+        "title": "Care with Love & Professionalism",
+        "description": "We understand that your dog is a member of your family. That's why we provide sitting and dog walking services that combine professionalism with genuine love for animals.",
+        "method1": "Safe and clean sitting environment",
+        "method2": "Daily photos and updates",
+        "method3": "Respect for your dog's routine and habits",
+        "method4": "Immediate communication in case of need"
+      },
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "subtitle": "Our commitment to your dog's safety and happiness",
+        "trusted": {
+          "title": "Trusted",
+          "description": "12+ years of experience with hundreds of satisfied clients"
+        },
+        "caring": {
+          "title": "Caring",
+          "description": "Your dog receives the same care you would give them"
+        },
+        "flexible": {
+          "title": "Flexible Schedule",
+          "description": "We adapt our services to your needs"
+        },
+        "updates": {
+          "title": "Daily Updates",
+          "description": "Photos and videos for your peace of mind"
+        }
+      },
       "features": {
         "home": "Home Environment",
         "updates": "Daily Photo Updates",
         "experienced": "Experienced Caretakers",
         "flexible": "Flexible Scheduling"
-      },
-      "cta": "Book Sitting"
+      }
     },
     "adventures": {
       "title": "Dog Adventures",
