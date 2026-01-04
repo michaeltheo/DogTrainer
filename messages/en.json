@@ -42,7 +42,7 @@
       },
       "training": {
         "title": "Dog Training - Professional Training",
-        "description": "Basic obedience, socialization, problem prevention, search & rescue, scent detection, behavioral modification, learning games, problem recognition, technical skills training. With years of experience, our expertise is based on the quality of creating instinctual and natural needs solving human needs through absolutely unique training with solid foundations and balanced relationships between human and dog. Our training systems follow the technique of instinctual and natural needs adapted to the creation of a unique family system in the authentic environment.",
+        "description": "Professional training with positive reinforcement. Basic obedience, socialization, behavior modification, and advanced techniques for all ages and needs.",
         "linkText": "View Our Services"
       },
       "adventures": {
@@ -163,7 +163,7 @@
       },
       "sitting": {
         "title": "Dog Sitting",
-        "description": "Reliable dog sitting and dog walking services with experienced professionals. Safe and comfortable care when you're away, with daily updates.",
+        "description": "Reliable dog sitting and dog walking with experienced professionals. Home environment, daily updates, flexible schedule for every need.",
         "feature1": "Home Environment Sitting",
         "feature2": "Daily Photos & Updates",
         "feature3": "Experienced & Certified Caretakers",
@@ -171,7 +171,7 @@
       },
       "adventures": {
         "title": "Nature Adventures",
-        "description": "Exciting outdoor adventures and excursions with your dog. Group hikes, nature adventures, and socialization in a safe environment.",
+        "description": "Exciting nature adventures with your dog. Group hikes, beach, socialization in a safe environment with experienced guides.",
         "feature1": "Group Nature Hikes",
         "feature2": "Adventures & Explorations",
         "feature3": "Safe Socialization",
@@ -184,42 +184,244 @@
     },
     "training": {
       "title": "Dog Training",
-      "metaTitle": "Professional Dog Training | Obedience & Behavior",
-      "metaDescription": "Expert dog training for puppies and adults. Obedience, behavior modification, socialization. Private and group sessions available.",
-      "description": "Comprehensive training programs for puppies and adult dogs",
+      "metaTitle": "Professional Dog Training Thessaloniki | Obedience & Behavior",
+      "metaDescription": "Expert dog training for puppies and adults in Thessaloniki. Obedience, behavior modification, socialization, dog handling. Certified trainers with modern methods.",
+      "description": "Comprehensive training programs with positive reinforcement",
+      "hero": {
+        "title": "Dog Training",
+        "subtitle": "Basic obedience, socialization, behavior modification, search & rescue, scent detection, play development with modern positive reinforcement methods.",
+        "benefit1": "Certified Trainers",
+        "benefit2": "Positive Reinforcement",
+        "benefit3": "12+ Years Experience"
+      },
+      "programs": {
+        "title": "Training Programs",
+        "subtitle": "Specialized programs designed for every age and need",
+        "puppy": {
+          "title": "Puppy Training",
+          "description": "Ideal for puppies 8-16 weeks. Socialization, basic commands, and good habits from an early age.",
+          "feature1": "Socialization with other puppies",
+          "feature2": "Basic commands (sit, stay)",
+          "feature3": "House training"
+        },
+        "obedience": {
+          "title": "Basic Obedience",
+          "description": "Complete obedience program for adult dogs. Learn basic and advanced commands.",
+          "feature1": "Basic commands (come, sit, lie down)",
+          "feature2": "Leash walking without pulling",
+          "feature3": "Distance commands"
+        },
+        "behavioral": {
+          "title": "Behavior Modification",
+          "description": "Specialized programs for addressing behavioral issues like aggression, anxiety, fears.",
+          "feature1": "Addressing aggression",
+          "feature2": "Managing anxiety & fears",
+          "feature3": "Correcting unwanted behavior"
+        },
+        "private": {
+          "title": "Private Sessions",
+          "description": "Personalized training at your home or selected location. Focus on specific needs.",
+          "feature1": "1-on-1 training",
+          "feature2": "Customized program",
+          "feature3": "Flexible schedule"
+        }
+      },
+      "methods": {
+        "badge": "Our Method",
+        "title": "Positive Reinforcement & Modern Techniques",
+        "description": "Our years of experience are based on creating a meaningful, stable, and balanced relationship between humans and dogs. We use modern methods that make training a fair framework for coexistence between owner and dog.",
+        "method1": "Positive reinforcement - Rewarding desired behavior",
+        "method2": "Respect for the dog's nature and needs",
+        "method3": "Individualized approach for each dog",
+        "method4": "Continuous training in new techniques"
+      },
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "subtitle": "Our commitment to excellence and dog care",
+        "certified": {
+          "title": "Certified",
+          "description": "Members of Greek Guide Dogs and A.P.D.T with international certifications"
+        },
+        "positive": {
+          "title": "Positive Reinforcement",
+          "description": "Using proven positive reinforcement methods"
+        },
+        "experience": {
+          "title": "12+ Years Experience",
+          "description": "Hundreds of successfully trained dogs"
+        },
+        "results": {
+          "title": "Proven Results",
+          "description": "Long-term results and satisfied clients"
+        }
+      },
+
       "features": {
         "obedience": "Basic & Advanced Obedience",
         "behavior": "Behavior Modification",
         "puppy": "Puppy Socialization",
         "private": "Private & Group Sessions"
-      },
-      "cta": "Start Training"
+      }
     },
     "sitting": {
       "title": "Dog Sitting",
-      "metaTitle": "Trusted Dog Sitting Services | Professional Pet Care",
-      "metaDescription": "Reliable dog sitting services with experienced professionals. Safe, comfortable home-away-from-home care for your pet. Daily updates included.",
-      "description": "Safe, comfortable care when you're away",
+      "metaTitle": "Professional Dog Sitting Thessaloniki | Dog Sitting & Pet Care",
+      "metaDescription": "Reliable dog sitting and dog walking services in Thessaloniki. Safe home-based care with experienced professionals, daily updates and photos. Available 24/7.",
+      "description": "Reliable care and sitting with love",
+      "hero": {
+        "title": "Professional Dog Sitting",
+        "subtitle": "We provide reliable dog sitting and dog walking services with experienced professionals. Your dog will feel at home with safety, love, and professional care.",
+        "benefit1": "Experienced Caretakers",
+        "benefit2": "Daily Updates",
+        "benefit3": "Available 24/7"
+      },
+      "services": {
+        "title": "Sitting Services",
+        "subtitle": "Specialized services tailored to your dog's needs",
+        "home": {
+          "title": "Home Sitting",
+          "description": "Your dog stays in a warm family environment with full care and attention.",
+          "feature1": "Warm family environment",
+          "feature2": "Full 24/7 care",
+          "feature3": "Daily photos & videos"
+        },
+        "daycare": {
+          "title": "Day Care",
+          "description": "Perfect for working owners. Your dog spends the day playing and socializing.",
+          "feature1": "Supervised play",
+          "feature2": "Socialization with other dogs",
+          "feature3": "Activities & exercise"
+        },
+        "extended": {
+          "title": "Extended Care",
+          "description": "For longer absences. Full care with regular updates on your dog's status.",
+          "feature1": "Multi-day care",
+          "feature2": "Regular updates & photos",
+          "feature3": "Maintaining your dog's routine"
+        },
+        "special": {
+          "title": "Special Needs",
+          "description": "Specialized care for dogs with special needs, seniors, or medical conditions.",
+          "feature1": "Medication administration",
+          "feature2": "Senior dog care",
+          "feature3": "Special diet & grooming"
+        }
+      },
+      "methods": {
+        "badge": "Our Approach",
+        "title": "Care with Love & Professionalism",
+        "description": "We understand that your dog is a member of your family. That's why we provide sitting and dog walking services that combine professionalism with genuine love for animals.",
+        "method1": "Safe and clean sitting environment",
+        "method2": "Daily photos and updates",
+        "method3": "Respect for your dog's routine and habits",
+        "method4": "Immediate communication in case of need"
+      },
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "subtitle": "Our commitment to your dog's safety and happiness",
+        "trusted": {
+          "title": "Trusted",
+          "description": "12+ years of experience with hundreds of satisfied clients"
+        },
+        "caring": {
+          "title": "Caring",
+          "description": "Your dog receives the same care you would give them"
+        },
+        "flexible": {
+          "title": "Flexible Schedule",
+          "description": "We adapt our services to your needs"
+        },
+        "updates": {
+          "title": "Daily Updates",
+          "description": "Photos and videos for your peace of mind"
+        }
+      },
       "features": {
         "home": "Home Environment",
         "updates": "Daily Photo Updates",
         "experienced": "Experienced Caretakers",
         "flexible": "Flexible Scheduling"
-      },
-      "cta": "Book Sitting"
+      }
     },
     "adventures": {
       "title": "Dog Adventures",
-      "metaTitle": "Dog Adventure Services | Hiking & Outdoor Activities",
-      "metaDescription": "Exciting outdoor adventures for your dog. Group hikes, beach trips, and nature exploration. Exercise, socialization, and fun combined.",
-      "description": "Exciting outdoor experiences and socialization",
+      "metaTitle": "Dog Adventures Thessaloniki | Hiking & Nature Activities",
+      "metaDescription": "Exciting dog adventures in nature near Thessaloniki. Group hikes, beach trips, socialization. Safe activities with experienced guides.",
+      "description": "Nature adventures for happy dogs",
+      "hero": {
+        "title": "Dog Adventures in Nature",
+        "subtitle": "Exciting excursions and adventures in nature for your dog. Group hikes, exploration, exercise and socialization in a safe environment with experienced guides.",
+        "benefit1": "Group Hikes",
+        "benefit2": "Safe Socialization",
+        "benefit3": "Experienced Guides"
+      },
+      "types": {
+        "title": "Adventure Types",
+        "subtitle": "Variety of activities for every dog and owner",
+        "hiking": {
+          "title": "Nature Hikes",
+          "description": "Group hikes on safe trails with beautiful scenery. Exercise, exploration and fun.",
+          "feature1": "Safe trails near Thessaloniki",
+          "feature2": "Group outings every weekend",
+          "feature3": "Suitable for all ages"
+        },
+        "beach": {
+          "title": "Beach Adventures",
+          "description": "Fun in the sand and water. Perfect for summer days with your dog.",
+          "feature1": "Play in sand and water",
+          "feature2": "Swimming and exercise",
+          "feature3": "Socialization with other dogs"
+        },
+        "social": {
+          "title": "Group Meetups",
+          "description": "Organized dog meetups in parks and special areas for safe socialization.",
+          "feature1": "Supervised play",
+          "feature2": "Groups by size/age",
+          "feature3": "Develop social skills"
+        },
+        "training": {
+          "title": "Nature Training",
+          "description": "Combination of adventure and training. Teach your dog to respond in real situations.",
+          "feature1": "Commands in natural environment",
+          "feature2": "Distraction management",
+          "feature3": "Practical skill application"
+        }
+      },
+      "benefits": {
+        "badge": "The Benefits",
+        "title": "Why Adventures Are Important",
+        "description": "Nature adventures offer multiple benefits for your dog's physical and mental health. Exercise, socialization and exploring new environments are essential for a happy dog.",
+        "benefit1": "Physical exercise and muscle strengthening",
+        "benefit2": "Mental stimulation and stress reduction",
+        "benefit3": "Socialization with other dogs",
+        "benefit4": "Strengthening bond with owner"
+      },
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "subtitle": "Safety, experience and love for animals",
+        "safe": {
+          "title": "Safe Routes",
+          "description": "We carefully select safe locations suitable for dogs"
+        },
+        "locations": {
+          "title": "Beautiful Locations",
+          "description": "We explore the best places around Thessaloniki"
+        },
+        "groups": {
+          "title": "Small Groups",
+          "description": "Limited participants for personal attention"
+        },
+        "experienced": {
+          "title": "Experienced Guides",
+          "description": "Certified trainers with first aid knowledge"
+        }
+      },
       "features": {
         "hiking": "Group Hiking Trips",
         "beach": "Beach Adventures",
         "socialization": "Safe Socialization",
         "exercise": "Physical & Mental Exercise"
-      },
-      "cta": "Join Adventure"
+      }
     }
   },
   "contact": {
