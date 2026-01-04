@@ -98,6 +98,18 @@
       "certification1": "Member of Greek Guide Dogs Association",
       "certification2": "Member of A.P.D.T (Association of Professional Dog Trainers)",
       "bio": "With years of experience in dog training and guide dog training, I am dedicated to creating harmonious relationships between people and their four-legged friends. My approach is based on scientific understanding of behavior and respect for every dog."
+    },
+    "dogs": {
+      "title": "The Four-Legged Teachers",
+      "subtitle": "Meet our trained dogs who assist in training and socialization",
+      "moufasa": {
+        "title": "The Spiritual Leader",
+        "description": "Moufasa is a highly experienced training dog with years of experience guiding other dogs. His calm demeanor and stability make him ideal for training dogs with behavioral issues."
+      },
+      "kai": {
+        "title": "The Eternal Sunshine",
+        "description": "Kai is full of energy and enthusiasm, perfect for socializing puppies and active dogs. Her friendly nature and playful spirit help dogs learn through fun."
+      }
     }
   },
   "services": {

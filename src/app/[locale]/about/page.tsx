@@ -5,6 +5,7 @@ import AboutHero from "@/components/about/AboutHero";
 import MissionSection from "@/components/about/MissionSection";
 import ValuesSection from "@/components/about/ValuesSection";
 import TrainerSection from "@/components/about/TrainerSection";
+import TeamDogsSection from "@/components/about/TeamDogsSection";
 import CTASection from "@/components/home/CTASection";
 
 export async function generateMetadata({
@@ -37,6 +38,7 @@ export default async function AboutPage({
       <MissionSection />
       <ValuesSection />
       <TrainerSection />
+      <TeamDogsSection />
       <CTASection />
     </>
   );

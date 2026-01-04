@@ -57,7 +57,7 @@ const ValueCard = memo(
         data-aos="fade-up"
         data-aos-duration="800"
       >
-        <CardBody className="p-6 md:p-8 flex flex-col items-center text-center gap-4">
+        <CardBody className="p-6 md:p-8 flex flex-col items-center text-center gap-4 overflow-hidden">
           {/* Icon with Background */}
           <div className="w-16 h-16 rounded-xl bg-accent-100 flex items-center justify-center shadow-md">
             <Icon className="w-8 h-8 text-gray-900 stroke-2" />
@@ -69,9 +69,7 @@ const ValueCard = memo(
           </h3>
 
           {/* Description */}
-          <p className="text-gray-700 leading-relaxed">
-            {t(descriptionKey)}
-          </p>
+          <p className="text-gray-700 leading-relaxed">{t(descriptionKey)}</p>
         </CardBody>
       </Card>
     );
