@@ -53,29 +53,37 @@ const ServiceCard = memo<ServiceCardProps>(({ service }) => {
 
   return (
     <Card
-      className="shadow-lg bg-white/50 hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full"
+      className="shadow-xl bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 h-full border border-gray-100 overflow-hidden group"
       data-aos="fade-up"
       data-aos-duration="800"
     >
-      <CardBody className="p-8 flex flex-col items-center text-center gap-4">
+      <CardBody className="p-8 flex flex-col items-center text-center gap-4 relative">
+        {/* Decorative background gradient on hover */}
+        <div className="absolute inset-0 bg-linear-to-br from-accent-50/0 to-accent-100/0 group-hover:from-accent-50/50 group-hover:to-accent-100/30 transition-all duration-500" />
+
         {/* Icon with Background */}
-        <div className="relative w-16 h-16">
-          <Image
-            src={service.icon}
-            alt={t(service.titleKey)}
-            fill
-            className="object-contain brightness-0 opacity-70"
-            sizes="64px"
-          />
+        <div className="relative z-10 w-24 h-24 rounded-2xl bg-linear-to-br from-accent-100 to-accent-200 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 mb-2">
+          <div className="relative w-14 h-14">
+            <Image
+              src={service.icon}
+              alt={t(service.titleKey)}
+              fill
+              className="object-contain brightness-0 opacity-60"
+              sizes="56px"
+            />
+          </div>
         </div>
 
         {/* Title */}
-        <h3 className="text-xl md:text-2xl font-bold text-gray-900">
+        <h3 className="relative z-10 text-xl md:text-2xl font-bold text-gray-900 group-hover:text-accent-700 transition-colors duration-300">
           {t(service.titleKey)}
         </h3>
 
+        {/* Divider */}
+        <div className="w-12 h-1 bg-accent-400 rounded-full group-hover:w-16 transition-all duration-300" />
+
         {/* Description */}
-        <p className="text-gray-700 leading-relaxed">
+        <p className="relative z-10 text-gray-700 leading-relaxed">
           {t(service.descriptionKey)}
         </p>
       </CardBody>

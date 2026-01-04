@@ -16,7 +16,7 @@ interface MainService {
 
 const mainServices: MainService[] = [
   {
-    image: "/dog-training.png",
+    image: "/positive-dog-training.jpg",
     titleKey: "main.training.title",
     descriptionKey: "main.training.description",
     href: "/services/dog-training",
@@ -40,7 +40,7 @@ const mainServices: MainService[] = [
     ],
   },
   {
-    image: "/dog-adventures.jpg",
+    image: "/dog-mountain-adventures.png",
     titleKey: "main.adventures.title",
     descriptionKey: "main.adventures.description",
     href: "/services/dog-adventures",

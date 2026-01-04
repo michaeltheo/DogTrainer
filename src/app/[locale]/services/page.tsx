@@ -13,11 +13,40 @@ export async function generateMetadata({
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "services" });
 
+  const keywords =
+    locale === "el"
+      ? [
+          "υπηρεσίες σκύλων",
+          "εκπαίδευση σκύλων",
+          "διατροφή σκύλου",
+          "dog handling",
+          "περίπατος σκύλου",
+          "φύλαξη σκύλων",
+          "κτηνιατρική υποστήριξη",
+          "εκδρομές σκύλων",
+          "dog sitting",
+          "dog training",
+          "Θεσσαλονίκη",
+        ]
+      : [
+          "dog services",
+          "dog training",
+          "dog nutrition",
+          "dog handling",
+          "dog walking",
+          "dog sitting",
+          "pet care",
+          "veterinary support",
+          "dog adventures",
+          "Thessaloniki",
+        ];
+
   return genMeta({
     title: t("metaTitle"),
     description: t("metaDescription"),
     locale,
     path: "/services",
+    keywords,
   });
 }
 
@@ -84,12 +113,15 @@ export default async function ServicesPage({
 
       {/* Page Hero */}
       <ServicesHero />
+
+      {/* Additional Services - Care & Advice */}
+      <AdditionalServicesSection />
+
+      {/* Main Services - Training, Sitting, Adventures */}
+      <MainServicesSection />
+
       {/* Social Responsibility */}
       <SocialResponsibilitySection />
-      {/* Additional Services */}
-      <AdditionalServicesSection />
-      {/* Main Services */}
-      <MainServicesSection />
     </>
   );
 }
