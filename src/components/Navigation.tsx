@@ -8,6 +8,7 @@ import NavItem from "./NavItem";
 import MobileMenuButton from "./MobileMenuButton";
 import MobileMenu from "./MobileMenu";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { socialLinks } from "@/constants/socialLinks";
 
 export default function Navigation() {
   const t = useTranslations("nav");
@@ -15,20 +16,23 @@ export default function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const navItems = useMemo(() => [
-    { href: "/", label: t("home") },
-    { href: "/about", label: t("about") },
-    {
-      href: "/services",
-      label: t("services"),
-      submenu: [
-        { href: "/services/dog-training", label: t("dogTraining") },
-        { href: "/services/dog-sitting", label: t("dogSitting") },
-        { href: "/services/dog-adventures", label: t("dogAdventures") },
-      ],
-    },
-    { href: "/contact", label: t("contact") },
-  ], [t]);
+  const navItems = useMemo(
+    () => [
+      { href: "/", label: t("home") },
+      { href: "/about", label: t("about") },
+      {
+        href: "/services",
+        label: t("services"),
+        submenu: [
+          { href: "/services/dog-training", label: t("dogTraining") },
+          { href: "/services/dog-sitting", label: t("dogSitting") },
+          { href: "/services/dog-adventures", label: t("dogAdventures") },
+        ],
+      },
+      { href: "/contact", label: t("contact") },
+    ],
+    [t]
+  );
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +44,7 @@ export default function Navigation() {
   }, []);
 
   const toggleMobileMenu = useCallback(() => {
-    setMobileMenuOpen(prev => !prev);
+    setMobileMenuOpen((prev) => !prev);
   }, []);
 
   const closeMobileMenu = useCallback(() => {
@@ -48,15 +52,35 @@ export default function Navigation() {
   }, []);
 
   return (
-    <nav className={`shadow-md sticky top-0 z-50 min-w-[320px] transition-all duration-300 ${
-      isScrolled
-        ? "bg-white/80 backdrop-blur-md"
-        : "bg-white"
-    }`}>
+    <nav
+      className={`shadow-md sticky top-0 z-50 min-w-[320px] transition-all duration-300 ${
+        isScrolled ? "bg-white/80 backdrop-blur-md" : "bg-white"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 min-w-0">
-          <div className="flex items-center min-w-0 shrink">
+          <div className="flex items-center gap-4 min-w-0 shrink">
             <Logo />
+            {/* Social Icons */}
+            <div className="flex items-center gap-3">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+                return (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`w-8 h-8 rounded-full ${social.bgColor} ${social.hoverBgColor} flex items-center justify-center transition-all duration-300 hover:scale-110 shadow-sm hover:shadow-md group`}
+                    aria-label={social.name}
+                  >
+                    <Icon
+                      className={`w-4 h-4 ${social.color} group-hover:animate-pulse transition-all duration-300`}
+                    />
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           {/* Desktop Navigation */}
