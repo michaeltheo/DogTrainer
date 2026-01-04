@@ -42,7 +42,7 @@
       },
       "training": {
         "title": "Dog Training - Professional Training",
-        "description": "Basic obedience, socialization, problem prevention, search & rescue, scent detection, behavioral modification, learning games, problem recognition, technical skills training. With years of experience, our expertise is based on the quality of creating instinctual and natural needs solving human needs through absolutely unique training with solid foundations and balanced relationships between human and dog. Our training systems follow the technique of instinctual and natural needs adapted to the creation of a unique family system in the authentic environment.",
+        "description": "Professional training with positive reinforcement. Basic obedience, socialization, behavior modification, and advanced techniques for all ages and needs.",
         "linkText": "View Our Services"
       },
       "adventures": {
@@ -184,16 +184,84 @@
     },
     "training": {
       "title": "Dog Training",
-      "metaTitle": "Professional Dog Training | Obedience & Behavior",
-      "metaDescription": "Expert dog training for puppies and adults. Obedience, behavior modification, socialization. Private and group sessions available.",
-      "description": "Comprehensive training programs for puppies and adult dogs",
+      "metaTitle": "Professional Dog Training Thessaloniki | Obedience & Behavior",
+      "metaDescription": "Expert dog training for puppies and adults in Thessaloniki. Obedience, behavior modification, socialization, dog handling. Certified trainers with modern methods.",
+      "description": "Comprehensive training programs with positive reinforcement",
+      "hero": {
+        "title": "Dog Training",
+        "subtitle": "Basic obedience, socialization, behavior modification, search & rescue, scent detection, play development with modern positive reinforcement methods.",
+        "benefit1": "Certified Trainers",
+        "benefit2": "Positive Reinforcement",
+        "benefit3": "12+ Years Experience"
+      },
+      "programs": {
+        "title": "Training Programs",
+        "subtitle": "Specialized programs designed for every age and need",
+        "puppy": {
+          "title": "Puppy Training",
+          "description": "Ideal for puppies 8-16 weeks. Socialization, basic commands, and good habits from an early age.",
+          "feature1": "Socialization with other puppies",
+          "feature2": "Basic commands (sit, stay)",
+          "feature3": "House training"
+        },
+        "obedience": {
+          "title": "Basic Obedience",
+          "description": "Complete obedience program for adult dogs. Learn basic and advanced commands.",
+          "feature1": "Basic commands (come, sit, lie down)",
+          "feature2": "Leash walking without pulling",
+          "feature3": "Distance commands"
+        },
+        "behavioral": {
+          "title": "Behavior Modification",
+          "description": "Specialized programs for addressing behavioral issues like aggression, anxiety, fears.",
+          "feature1": "Addressing aggression",
+          "feature2": "Managing anxiety & fears",
+          "feature3": "Correcting unwanted behavior"
+        },
+        "private": {
+          "title": "Private Sessions",
+          "description": "Personalized training at your home or selected location. Focus on specific needs.",
+          "feature1": "1-on-1 training",
+          "feature2": "Customized program",
+          "feature3": "Flexible schedule"
+        }
+      },
+      "methods": {
+        "badge": "Our Method",
+        "title": "Positive Reinforcement & Modern Techniques",
+        "description": "Our years of experience are based on creating a meaningful, stable, and balanced relationship between humans and dogs. We use modern methods that make training a fair framework for coexistence between owner and dog.",
+        "method1": "Positive reinforcement - Rewarding desired behavior",
+        "method2": "Respect for the dog's nature and needs",
+        "method3": "Individualized approach for each dog",
+        "method4": "Continuous training in new techniques"
+      },
+      "whyChooseUs": {
+        "title": "Why Choose Us",
+        "subtitle": "Our commitment to excellence and dog care",
+        "certified": {
+          "title": "Certified",
+          "description": "Members of Greek Guide Dogs and A.P.D.T with international certifications"
+        },
+        "positive": {
+          "title": "Positive Reinforcement",
+          "description": "Using proven positive reinforcement methods"
+        },
+        "experience": {
+          "title": "12+ Years Experience",
+          "description": "Hundreds of successfully trained dogs"
+        },
+        "results": {
+          "title": "Proven Results",
+          "description": "Long-term results and satisfied clients"
+        }
+      },
+
       "features": {
         "obedience": "Basic & Advanced Obedience",
         "behavior": "Behavior Modification",
         "puppy": "Puppy Socialization",
         "private": "Private & Group Sessions"
-      },
-      "cta": "Start Training"
+      }
     },
     "sitting": {
       "title": "Dog Sitting",
