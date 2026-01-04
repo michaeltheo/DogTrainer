@@ -36,7 +36,7 @@ const TrainingMethodsSection = memo(() => {
             data-aos-duration="1000"
           >
             <div className="inline-block mb-4">
-              <div className="bg-primary-100 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
+              <div className="bg-green-100 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
                 {t("methods.badge")}
               </div>
             </div>
@@ -59,13 +59,13 @@ const TrainingMethodsSection = memo(() => {
               ].map((method, index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 p-4 bg-primary-50 rounded-xl transition-all duration-300 hover:bg-primary-100"
+                  className="flex items-start gap-4 p-4 bg-green-50 rounded-xl transition-all duration-300 hover:bg-green-100"
                   data-aos="fade-up"
                   data-aos-delay={index * 100}
                 >
-                  <div className="w-8 h-8 rounded-full bg-primary-500 flex items-center justify-center shrink-0">
+                  <div className="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center shrink-0">
                     <svg
-                      className="w-5 h-5 text-black"
+                      className="w-5 h-5 text-white"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
