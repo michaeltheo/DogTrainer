@@ -56,15 +56,60 @@
     "title": "About Us",
     "metaTitle": "About Our Dog Training Team | Certified Professionals",
     "metaDescription": "Meet our team of certified dog trainers with 10+ years experience. Specializing in positive reinforcement and behavioral modification techniques.",
+    "hero": {
+      "title": "Who We Are",
+      "subtitle": "Professional dog trainers dedicated to creating harmonious relationships between people and their dogs"
+    },
     "intro": "Professional dog trainers dedicated to strengthening the bond between you and your pet",
     "story": "With over a decade of experience, we've helped hundreds of dogs and their owners achieve harmony through positive training methods.",
     "mission": {
       "title": "Our Mission",
-      "description": "To create well-balanced, happy dogs through compassionate, evidence-based training methods that respect both dog and owner."
+      "subtitle": "Building Strong Bonds",
+      "description": "Our mission is to create well-balanced, happy dogs through evidence-based training methods that respect both dog and owner. We believe in the power of positive reinforcement and consistent training to build trust and understanding. Every dog is unique, and we tailor our approach to meet the individual needs of each furry friend and their family."
+    },
+    "values": {
+      "title": "Our Values",
+      "subtitle": "The principles that guide every training session",
+      "love": {
+        "title": "Love & Respect",
+        "description": "Every dog deserves to be treated with love, respect, and understanding. This principle is the foundation of all our training methods."
+      },
+      "expertise": {
+        "title": "Expertise & Experience",
+        "description": "With over 12 years of experience and continuous training, we bring professionalism and knowledge to every session."
+      },
+      "support": {
+        "title": "Customized Solutions",
+        "description": "Every dog and family is different. We create personalized programs that fit your unique needs and goals."
+      },
+      "results": {
+        "title": "Support & Collaboration",
+        "description": "We stand by you every step of the training journey, providing ongoing support and guidance."
+      }
     },
     "approach": {
       "title": "Our Approach",
       "description": "We use positive reinforcement techniques backed by modern behavioral science to create lasting behavioral change."
+    },
+    "trainer": {
+      "hero": "Founder – Cobrelius Dog Training Services",
+      "name": "Virginia Tsigara",
+      "title": "Professional Dog Trainer",
+      "certification1": "Member of Greek Guide Dogs Association",
+      "certification2": "Member of A.P.D.T (Association of Professional Dog Trainers)",
+      "bio": "With years of experience in dog training and guide dog training, I am dedicated to creating harmonious relationships between people and their four-legged friends. My approach is based on scientific understanding of behavior and respect for every dog."
+    },
+    "dogs": {
+      "title": "The Four-Legged Teachers",
+      "subtitle": "Meet our trained dogs who assist in training and socialization",
+      "moufasa": {
+        "title": "The Spiritual Leader",
+        "description": "Moufasa is a highly experienced training dog with years of experience guiding other dogs. His calm demeanor and stability make him ideal for training dogs with behavioral issues."
+      },
+      "kai": {
+        "title": "The Eternal Sunshine",
+        "description": "Kai is full of energy and enthusiasm, perfect for socializing puppies and active dogs. Her friendly nature and playful spirit help dogs learn through fun."
+      }
     }
   },
   "services": {

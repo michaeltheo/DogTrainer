@@ -21,17 +21,17 @@ const CTASection = memo(() => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/dog_trainer_with_dog.jpg"
+          src="/dog-adventures.jpg"
           alt="Εκπαίδευση σκύλων και φύλαξη σκύλων Θεσσαλονίκη - Dog training and dog sitting services"
           fill
-          className="object-cover"
+          className="object-cover object-bottom"
           sizes="100vw"
+          quality={75}
           priority={false}
         />
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50" />
       </div>
-
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
