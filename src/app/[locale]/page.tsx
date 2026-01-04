@@ -8,7 +8,6 @@ import AboutSection from "@/components/home/AboutSection";
 import ServicesOverview from "@/components/home/ServicesOverview";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import WhyChooseUsSection from "@/components/home/WhyChooseUsSection";
-import CTASection from "@/components/home/CTASection";
 
 export async function generateMetadata({
   params,
@@ -102,9 +101,6 @@ export default async function HomePage({
 
       {/* Why Choose Us Section - Key Features */}
       <WhyChooseUsSection />
-
-      {/* CTA Section - Call to Action */}
-      <CTASection />
     </>
   );
 }

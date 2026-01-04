@@ -1,126 +1,127 @@
-import {getTranslations, setRequestLocale} from 'next-intl/server';
-import { generateMetadata as genMeta } from '@/lib/seo';
-import { Link } from '@/i18n/routing';
+import { setRequestLocale, getTranslations } from "next-intl/server";
+import { generateMetadata as genMeta, generateItemListSchema } from "@/lib/seo";
+import ServicesHero from "@/components/services/ServicesHero";
+import AdditionalServicesSection from "@/components/services/AdditionalServicesSection";
+import MainServicesSection from "@/components/services/MainServicesSection";
+import SocialResponsibilitySection from "@/components/services/SocialResponsibilitySection";
 
-export async function generateMetadata({params}: {params: Promise<{locale: string}>}) {
-  const {locale} = await params;
-  const t = await getTranslations({locale, namespace: 'services'});
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "services" });
+
+  const keywords =
+    locale === "el"
+      ? [
+          "υπηρεσίες σκύλων",
+          "εκπαίδευση σκύλων",
+          "διατροφή σκύλου",
+          "dog handling",
+          "περίπατος σκύλου",
+          "φύλαξη σκύλων",
+          "κτηνιατρική υποστήριξη",
+          "εκδρομές σκύλων",
+          "dog sitting",
+          "dog training",
+          "Θεσσαλονίκη",
+        ]
+      : [
+          "dog services",
+          "dog training",
+          "dog nutrition",
+          "dog handling",
+          "dog walking",
+          "dog sitting",
+          "pet care",
+          "veterinary support",
+          "dog adventures",
+          "Thessaloniki",
+        ];
 
   return genMeta({
-    title: t('metaTitle'),
-    description: t('metaDescription'),
+    title: t("metaTitle"),
+    description: t("metaDescription"),
     locale,
-    path: '/services',
+    path: "/services",
+    keywords,
   });
 }
 
-export default async function ServicesPage({params}: {params: Promise<{locale: string}>}) {
-  const {locale} = await params;
+export default async function ServicesPage({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('services');
-  const tCommon = await getTranslations('common');
+  const t = await getTranslations("services");
 
-  const services = [
-    {
-      title: t('training.title'),
-      description: t('training.description'),
-      href: '/services/dog-training',
-      icon: '🎓',
-      features: [
-        t('training.features.obedience'),
-        t('training.features.behavior'),
-        t('training.features.puppy'),
-        t('training.features.private'),
-      ],
-      cta: t('training.cta'),
-      color: 'blue',
-      delay: '0',
-    },
-    {
-      title: t('sitting.title'),
-      description: t('sitting.description'),
-      href: '/services/dog-sitting',
-      icon: '🏠',
-      features: [
-        t('sitting.features.home'),
-        t('sitting.features.updates'),
-        t('sitting.features.experienced'),
-        t('sitting.features.flexible'),
-      ],
-      cta: t('sitting.cta'),
-      color: 'green',
-      delay: '100',
-    },
-    {
-      title: t('adventures.title'),
-      description: t('adventures.description'),
-      href: '/services/dog-adventures',
-      icon: '⛰️',
-      features: [
-        t('adventures.features.hiking'),
-        t('adventures.features.beach'),
-        t('adventures.features.socialization'),
-        t('adventures.features.exercise'),
-      ],
-      cta: t('adventures.cta'),
-      color: 'purple',
-      delay: '200',
-    },
-  ];
+  // Generate ItemList schema for all services
+  const servicesListSchema = generateItemListSchema(
+    [
+      // Main services
+      {
+        name: t("main.training.title"),
+        description: t("main.training.description"),
+      },
+      {
+        name: t("main.sitting.title"),
+        description: t("main.sitting.description"),
+      },
+      {
+        name: t("main.adventures.title"),
+        description: t("main.adventures.description"),
+      },
+      // Additional services
+      {
+        name: t("additional.nutrition.title"),
+        description: t("additional.nutrition.description"),
+      },
+      {
+        name: t("additional.activities.title"),
+        description: t("additional.activities.description"),
+      },
+      {
+        name: t("additional.training.title"),
+        description: t("additional.training.description"),
+      },
+      {
+        name: t("additional.guides.title"),
+        description: t("additional.guides.description"),
+      },
+      {
+        name: t("additional.veterinary.title"),
+        description: t("additional.veterinary.description"),
+      },
+      {
+        name: t("additional.excursions.title"),
+        description: t("additional.excursions.description"),
+      },
+    ],
+    t("hero.title")
+  );
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-100 to-primary-200 py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4" data-aos="fade-up">
-            {t('title')}
-          </h1>
-          <p className="text-xl text-gray-700" data-aos="fade-up" data-aos-delay="100">
-            {t('metaDescription')}
-          </p>
-        </div>
-      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(servicesListSchema) }}
+      />
 
-      {/* Services Grid */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.href}
-                className="bg-white border-2 border-gray-200 rounded-xl p-8 hover:shadow-xl transition-shadow"
-                data-aos="fade-up"
-                data-aos-delay={service.delay}
-              >
-                <div className={`text-6xl mb-4`}>{service.icon}</div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">
-                  {service.title}
-                </h2>
-                <p className="text-gray-700 mb-6">
-                  {service.description}
-                </p>
-                <ul className="space-y-2 mb-8">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <svg className={`w-6 h-6 text-${service.color}-600 mr-2 flex-shrink-0`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-gray-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href={service.href}
-                  className={`block w-full text-center bg-${service.color}-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-${service.color}-700 transition-colors`}
-                >
-                  {tCommon('learnMore')}
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Page Hero */}
+      <ServicesHero />
+
+      {/* Additional Services - Care & Advice */}
+      <AdditionalServicesSection />
+
+      {/* Main Services - Training, Sitting, Adventures */}
+      <MainServicesSection />
+
+      {/* Social Responsibility */}
+      <SocialResponsibilitySection />
     </>
   );
 }

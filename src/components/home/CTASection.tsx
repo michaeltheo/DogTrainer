@@ -55,7 +55,7 @@ const CTASection = memo(() => {
             </p>
 
             {/* CTA Button */}
-            <div data-aos="fade-up" data-aos-delay="400">
+            <div>
               <Button
                 size="lg"
                 className=" font-bold text-lg px-8 py-6 shadow-3xl hover:shadow-4xl transition-all transform hover:scale-105 hover:cursor-pointer"
