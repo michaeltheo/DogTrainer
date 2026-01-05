@@ -63,10 +63,15 @@ const MainServiceCard = memo<MainServiceCardProps>(({ service, index }) => {
   const router = useRouter();
   const locale = useLocale();
   const isReversed = index % 2 !== 0;
+  const showCallButton = service.titleKey === "main.training.title" || service.titleKey === "main.sitting.title";
 
   const handleClick = useCallback(() => {
     router.push(`/${locale}${service.href}`);
   }, [locale, router, service.href]);
+
+  const handleContactClick = useCallback(() => {
+    router.push(`/${locale}/contact`);
+  }, [locale, router]);
 
   return (
     <div
@@ -94,7 +99,7 @@ const MainServiceCard = memo<MainServiceCardProps>(({ service, index }) => {
       {/* Content */}
       <div className={`${isReversed ? "lg:order-1" : "lg:order-2"}`}>
         <div className="inline-block mb-4">
-          <div className="bg-accent-100 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
+          <div className="bg-orange-100 text-gray-900 px-4 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
             {t("main.badge")}
           </div>
         </div>
@@ -112,7 +117,7 @@ const MainServiceCard = memo<MainServiceCardProps>(({ service, index }) => {
           {service.features.map((featureKey) => (
             <li key={featureKey} className="flex items-start gap-3">
               <svg
-                className="w-6 h-6 text-accent-500 shrink-0 mt-0.5"
+                className="w-6 h-6 text-orange-600 shrink-0 mt-0.5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -127,13 +132,24 @@ const MainServiceCard = memo<MainServiceCardProps>(({ service, index }) => {
           ))}
         </ul>
 
-        <Button
-          size="lg"
-          className="bg-accent-500 hover:bg-accent-600 text-gray-900 font-bold px-8 py-6 shadow-lg hover:shadow-xl transition-all transform hover:scale-105"
-          onClick={handleClick}
-        >
-          {t("main.learnMore")}
-        </Button>
+        <div className="flex flex-wrap gap-4">
+          <Button
+            size="lg"
+            className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+            onPress={handleClick}
+          >
+            {t("main.learnMore")}
+          </Button>
+          {showCallButton && (
+            <Button
+              size="lg"
+              className="bg-white hover:bg-orange-50 text-orange-600 font-bold px-8 py-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border-2 border-orange-500"
+              onPress={handleContactClick}
+            >
+              {t("main.callNow")}
+            </Button>
+          )}
+        </div>
       </div>
     </div>
   );
@@ -152,7 +168,7 @@ const MainServicesSection = memo(() => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             {t("main.title")}
           </h2>
-          <div className="w-24 h-1.5 bg-linear-to-r from-accent-400 via-accent-500 to-accent-600 mx-auto rounded-full mb-6 shadow-lg" />
+          <div className="w-24 h-1.5 bg-linear-to-r from-orange-400 via-orange-500 to-orange-600 mx-auto rounded-full mb-6 shadow-lg" />
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             {t("main.subtitle")}
           </p>

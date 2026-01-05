@@ -71,24 +71,24 @@ const ProgramCard = memo<ProgramCardProps>(({ program, index }) => {
 
   return (
     <Card
-      className="shadow-xl bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 h-full border-t-4 border-green-500 overflow-hidden group"
+      className="shadow-xl bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-3 h-full border-t-4 border-orange-500 overflow-hidden group"
       data-aos="fade-up"
       data-aos-duration="800"
       data-aos-delay={index * 100}
     >
       <CardBody className="p-8">
         {/* Icon with Background */}
-        <div className="w-20 h-20 rounded-2xl bg-green-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 mb-6">
+        <div className="w-20 h-20 rounded-2xl bg-orange-500 flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-110 mb-6">
           <Icon className="w-10 h-10 text-white stroke-2" />
         </div>
 
         {/* Title */}
-        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-green-600 transition-colors duration-300">
+        <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
           {t(program.titleKey)}
         </h3>
 
         {/* Divider */}
-        <div className="w-12 h-1 bg-green-400 rounded-full group-hover:w-16 transition-all duration-300 mb-4" />
+        <div className="w-12 h-1 bg-orange-400 rounded-full group-hover:w-16 transition-all duration-300 mb-4" />
 
         {/* Description */}
         <p className="text-gray-700 mb-6 leading-relaxed">
@@ -100,7 +100,7 @@ const ProgramCard = memo<ProgramCardProps>(({ program, index }) => {
           {program.featuresKey.map((featureKey) => (
             <li key={featureKey} className="flex items-start gap-3">
               <svg
-                className="w-5 h-5 text-green-600 shrink-0 mt-0.5"
+                className="w-5 h-5 text-orange-600 shrink-0 mt-0.5"
                 fill="currentColor"
                 viewBox="0 0 20 20"
               >
@@ -132,7 +132,7 @@ const TrainingProgramsSection = memo(() => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             {t("programs.title")}
           </h2>
-          <div className="w-24 h-1.5 bg-linear-to-r from-green-400 via-green-500 to-green-600 mx-auto rounded-full mb-6 shadow-lg" />
+          <div className="w-24 h-1.5 bg-linear-to-r from-orange-400 via-orange-500 to-orange-600 mx-auto rounded-full mb-6 shadow-lg" />
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             {t("programs.subtitle")}
           </p>

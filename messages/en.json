@@ -153,6 +153,7 @@
       "title": "Our Main Services",
       "subtitle": "Specialized training, sitting, and adventure services for your dog",
       "learnMore": "Learn More",
+      "callNow": "Call Us Now",
       "training": {
         "title": "Dog Training",
         "description": "Professional dog training using positive reinforcement methods. Training programs for puppies and adult dogs, dog handling, basic obedience, and advanced training.",
@@ -365,13 +366,6 @@
           "feature2": "Group outings every weekend",
           "feature3": "Suitable for all ages"
         },
-        "beach": {
-          "title": "Beach Adventures",
-          "description": "Fun in the sand and water. Perfect for summer days with your dog.",
-          "feature1": "Play in sand and water",
-          "feature2": "Swimming and exercise",
-          "feature3": "Socialization with other dogs"
-        },
         "social": {
           "title": "Group Meetups",
           "description": "Organized dog meetups in parks and special areas for safe socialization.",
@@ -418,7 +412,6 @@
       },
       "features": {
         "hiking": "Group Hiking Trips",
-        "beach": "Beach Adventures",
         "socialization": "Safe Socialization",
         "exercise": "Physical & Mental Exercise"
       }
@@ -428,22 +421,50 @@
     "title": "Contact Us",
     "metaTitle": "Contact Us | Book Your Dog Training Consultation",
     "metaDescription": "Get in touch for professional dog training, sitting, or adventure services. Free consultation available. Call or email us today.",
-    "subtitle": "Get in touch to discuss your dog's needs",
+    "subtitle": "Have questions or need help? We're here to listen and discuss your dog's needs",
     "form": {
+      "title": "Send Us a Message",
+      "description": "Fill out the form and we'll get back to you as soon as possible",
       "name": "Your Name",
+      "namePlaceholder": "e.g. John Smith",
       "email": "Email Address",
+      "emailPlaceholder": "email@example.com",
       "phone": "Phone Number",
+      "phonePlaceholder": "+30 698 983 5114",
       "dogName": "Dog's Name",
+      "dogNamePlaceholder": "e.g. Max",
       "service": "Service Interested In",
       "message": "Tell us about your dog",
+      "messagePlaceholder": "Tell us about your dog and your needs...",
       "submit": "Send Message",
-      "selectService": "Select a service"
+      "selectService": "Select a service",
+      "successMessage": "Thank you! We'll get back to you soon.",
+      "serviceTraining": "Dog Training",
+      "serviceSitting": "Dog Sitting",
+      "serviceAdventures": "Dog Adventures"
     },
     "info": {
+      "title": "Get in Touch",
+      "description": "We're here to help with your dog's needs",
       "address": "Address",
+      "addressValue": "Tsimiski 31, 54624 Thessaloniki",
       "phone": "Phone",
+      "phoneValue": "+30 698 983 5114",
       "email": "Email",
-      "hours": "Hours"
+      "emailValue": "virginia@dogtrainers.gr",
+      "hours": "Opening Hours"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "description": "Contact us during our business hours",
+      "weekdays": "Monday - Friday",
+      "weekdaysHours": "10:00 AM - 8:00 PM",
+      "saturday": "Saturday",
+      "saturdayHours": "11:00 AM - 3:00 PM",
+      "sunday": "Sunday",
+      "sundayHours": "Closed",
+      "note": "Note:",
+      "noteText": "Appointments are by reservation only. Contact us to book your appointment!"
     }
   },
   "testimonials": {
