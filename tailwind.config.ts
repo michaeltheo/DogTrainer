@@ -12,35 +12,35 @@ const config: Config = {
     extend: {
       colors: {
         primary: {
-          50: "#FDF7FB", // Lightest pink
-          100: "#F5E6F0", // Very light pink
-          200: "#EDD0E3", // Light pink
-          300: "#E4B9D5", // Soft pink
-          400: "#D8A7C3", // Main pink
-          500: "#C891B0", // Medium pink
-          600: "#B67B9D", // Deep pink
-          700: "#9B6684", // Darker pink
-          800: "#7D526B", // Very dark pink
-          900: "#2D1B2E", // Almost black purple
+          50: "#FDF7FB",
+          100: "#F5E6F0",
+          200: "#EDD0E3",
+          300: "#E4B9D5",
+          400: "#D8A7C3",
+          500: "#C891B0",
+          600: "#B67B9D",
+          700: "#9B6684",
+          800: "#7D526B",
+          900: "#2D1B2E",
         },
         accent: {
-          50: "#FFFBF0",
-          100: "#FFF8E1",
-          200: "#FFECB3",
-          300: "#FFE082",
-          400: "#FFD54F",
-          500: "#F4C430", // Golden yellow
-          600: "#FBC02D",
-          700: "#F9A825",
-          800: "#F57F17",
-          900: "#E65100",
+          50: "#FFF7ED",
+          100: "#FFEDD5",
+          200: "#FED7AA",
+          300: "#FDBA74",
+          400: "#FB923C",
+          500: "#F97316", // Orange 500
+          600: "#EA580C", // Orange 600
+          700: "#C2410C",
+          800: "#9A3412",
+          900: "#7C2D12",
         },
         purple: {
           50: "#F9F7FB",
           100: "#F0EBF5",
           200: "#DFD4E8",
           300: "#CEBDDB",
-          400: "#B89FC9", // Purple tint
+          400: "#B89FC9",
           500: "#A485B8",
           600: "#8E6BA3",
           700: "#755688",
@@ -67,7 +67,30 @@ const config: Config = {
     },
   },
   darkMode: "class",
-  plugins: [heroui()],
+  plugins: [
+    heroui({
+      themes: {
+        light: {
+          colors: {
+            warning: {
+              50: "#FFF7ED",
+              100: "#FFEDD5",
+              200: "#FED7AA",
+              300: "#FDBA74",
+              400: "#FB923C",
+              500: "#F97316",
+              600: "#EA580C",
+              700: "#C2410C",
+              800: "#9A3412",
+              900: "#7C2D12",
+              DEFAULT: "#F97316",
+              foreground: "#ffffff",
+            },
+          },
+        },
+      },
+    }),
+  ],
 };
 
 export default config;
