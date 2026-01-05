@@ -16,14 +16,14 @@ const SocialResponsibilitySection = memo(() => {
           data-aos-duration="1000"
         >
           {/* Card Container */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-accent-100 relative overflow-hidden">
+          <div className="bg-white rounded-3xl shadow-2xl p-8 md:p-12 border border-orange-100 relative overflow-hidden">
             {/* Decorative accent bar */}
-            <div className="absolute top-0 left-0 right-0 h-1.5 bg-linear-to-r from-accent-400 via-accent-500 to-accent-600" />
+            <div className="absolute top-0 left-0 right-0 h-1.5 bg-linear-to-r from-orange-400 via-orange-500 to-orange-600" />
 
             <div className="text-center">
               {/* Icon */}
-              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-linear-to-br from-accent-100 to-accent-200 shadow-lg mb-6">
-                <HeartIcon className="w-10 h-10 text-accent-600" />
+              <div className="inline-flex items-center justify-center w-20 h-20 rounded-full bg-linear-to-br from-orange-100 to-orange-200 shadow-lg mb-6">
+                <HeartIcon className="w-10 h-10 text-orange-600" />
               </div>
 
               {/* Title */}
@@ -32,7 +32,7 @@ const SocialResponsibilitySection = memo(() => {
               </h2>
 
               {/* Divider */}
-              <div className="w-16 h-1 bg-accent-400 rounded-full mx-auto mb-6" />
+              <div className="w-16 h-1 bg-orange-400 rounded-full mx-auto mb-6" />
 
               {/* Description */}
               <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mx-auto">
