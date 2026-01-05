@@ -3,19 +3,18 @@
 import { memo } from "react";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { Form, Input, Textarea, Select, SelectItem, Button } from "@heroui/react";
+import { Button } from "@heroui/react";
 import { ClockIcon } from "@heroicons/react/24/solid";
 
 const ContactFormSection = memo(() => {
-  const t = useTranslations("contact.form");
+  const tForm = useTranslations("contact.form");
+  const tHours = useTranslations("contact.hours");
   const [submitted, setSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [errors, setErrors] = useState({});
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setErrors({});
 
     // Get form data
     const formData = Object.fromEntries(new FormData(e.currentTarget));
@@ -35,15 +34,15 @@ const ContactFormSection = memo(() => {
   };
 
   const services = [
-    { key: "training", label: "Dog Training - Εκπαίδευση Σκύλων" },
-    { key: "sitting", label: "Dog Sitting - Φύλαξη Σκύλων" },
-    { key: "adventures", label: "Dog Adventures - Εκδρομές στη Φύση" },
+    { key: "training", label: tForm("serviceTraining") },
+    { key: "sitting", label: tForm("serviceSitting") },
+    { key: "adventures", label: tForm("serviceAdventures") },
   ];
 
   const schedule = [
-    { day: "Δευτέρα - Παρασκευή", hours: "10:00 - 20:00" },
-    { day: "Σάββατο", hours: "11:00 - 15:00" },
-    { day: "Κυριακή", hours: "Κλειστά" },
+    { day: tHours("weekdays"), hours: tHours("weekdaysHours") },
+    { day: tHours("saturday"), hours: tHours("saturdayHours") },
+    { day: tHours("sunday"), hours: tHours("sundayHours") },
   ];
 
   return (
@@ -55,128 +54,141 @@ const ContactFormSection = memo(() => {
             <div data-aos="fade-right">
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                  Στείλτε μας Μήνυμα
+                  {tForm("title")}
                 </h2>
-                <div className="w-20 h-1.5 bg-gradient-to-r from-accent-400 to-accent-600 rounded-full mb-6" />
+                <div className="w-20 h-1.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full mb-6" />
                 <p className="text-lg text-gray-700">
-                  Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας το
-                  συντομότερο
+                  {tForm("description")}
                 </p>
               </div>
 
-              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
-                <Form
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-gray-200">
+                <form
                   className="flex flex-col gap-6"
-                  validationErrors={errors}
                   onSubmit={handleSubmit}
                 >
-                  <Input
-                    type="text"
-                    label={t("name")}
-                    name="name"
-                    isRequired
-                    labelPlacement="outside"
-                    placeholder="Π.χ. Γιάννης Παπαδόπουλος"
-                    variant="bordered"
-                    classNames={{
-                      input: "text-base",
-                      inputWrapper:
-                        "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
-                    }}
-                  />
+                  <div className="flex flex-col gap-2">
+                    <label
+                      htmlFor="name"
+                      className="text-gray-700 font-semibold text-sm"
+                    >
+                      {tForm("name")} <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      id="name"
+                      type="text"
+                      name="name"
+                      required
+                      placeholder={tForm("namePlaceholder")}
+                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                    />
+                  </div>
 
-                  <Input
-                    type="email"
-                    label={t("email")}
-                    name="email"
-                    isRequired
-                    labelPlacement="outside"
-                    placeholder="email@example.com"
-                    variant="bordered"
-                    classNames={{
-                      input: "text-base",
-                      inputWrapper:
-                        "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
-                    }}
-                  />
+                  <div className="flex flex-col gap-2">
+                    <label
+                      htmlFor="email"
+                      className="text-gray-700 font-semibold text-sm"
+                    >
+                      {tForm("email")} <span className="text-red-500">*</span>
+                    </label>
+                    <input
+                      id="email"
+                      type="email"
+                      name="email"
+                      required
+                      placeholder={tForm("emailPlaceholder")}
+                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                    />
+                  </div>
 
-                  <Input
-                    type="tel"
-                    label={t("phone")}
-                    name="phone"
-                    labelPlacement="outside"
-                    placeholder="+30 698 983 5114"
-                    variant="bordered"
-                    classNames={{
-                      input: "text-base",
-                      inputWrapper:
-                        "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
-                    }}
-                  />
+                  <div className="flex flex-col gap-2">
+                    <label
+                      htmlFor="phone"
+                      className="text-gray-700 font-semibold text-sm"
+                    >
+                      {tForm("phone")}
+                    </label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      placeholder={tForm("phonePlaceholder")}
+                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                    />
+                  </div>
 
-                  <Input
-                    type="text"
-                    label={t("dogName")}
-                    name="dogName"
-                    labelPlacement="outside"
-                    placeholder="Π.χ. Μαξ"
-                    variant="bordered"
-                    classNames={{
-                      input: "text-base",
-                      inputWrapper:
-                        "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
-                    }}
-                  />
+                  <div className="flex flex-col gap-2">
+                    <label
+                      htmlFor="dogName"
+                      className="text-gray-700 font-semibold text-sm"
+                    >
+                      {tForm("dogName")}
+                    </label>
+                    <input
+                      id="dogName"
+                      type="text"
+                      name="dogName"
+                      placeholder={tForm("dogNamePlaceholder")}
+                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                    />
+                  </div>
 
-                  <Select
-                    label={t("service")}
-                    name="service"
-                    isRequired
-                    labelPlacement="outside"
-                    placeholder={t("selectService")}
-                    variant="bordered"
-                    classNames={{
-                      trigger:
-                        "border-gray-300 hover:border-accent-500 data-[focus=true]:border-accent-500",
-                    }}
-                  >
-                    {services.map((service) => (
-                      <SelectItem key={service.key}>{service.label}</SelectItem>
-                    ))}
-                  </Select>
+                  <div className="flex flex-col gap-2">
+                    <label
+                      htmlFor="service"
+                      className="text-gray-700 font-semibold text-sm"
+                    >
+                      {tForm("service")} <span className="text-red-500">*</span>
+                    </label>
+                    <select
+                      id="service"
+                      name="service"
+                      required
+                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                    >
+                      <option value="">{tForm("selectService")}</option>
+                      {services.map((service) => (
+                        <option key={service.key} value={service.key}>
+                          {service.label}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
 
-                  <Textarea
-                    label={t("message")}
-                    name="message"
-                    isRequired
-                    labelPlacement="outside"
-                    placeholder="Πείτε μας για τον σκύλο σας και τις ανάγκες σας..."
-                    minRows={5}
-                    variant="bordered"
-                    classNames={{
-                      input: "text-base",
-                      inputWrapper:
-                        "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
-                    }}
-                  />
+                  <div className="flex flex-col gap-2">
+                    <label
+                      htmlFor="message"
+                      className="text-gray-700 font-semibold text-sm"
+                    >
+                      {tForm("message")} <span className="text-red-500">*</span>
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      required
+                      rows={5}
+                      placeholder={tForm("messagePlaceholder")}
+                      className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900 resize-none"
+                    />
+                  </div>
 
                   <Button
                     type="submit"
-                    className="w-full bg-gradient-to-r from-accent-500 to-accent-600 text-white font-semibold text-lg py-6 shadow-lg hover:shadow-xl transition-all"
-                    isLoading={isSubmitting}
                     size="lg"
+                    className="font-bold text-lg mt-2 bg-gradient-to-r from-orange-500 to-orange-600 text-white hover:from-orange-600 hover:to-orange-700 shadow-lg"
+                    isLoading={isSubmitting}
                   >
-                    {t("submit")}
+                    {tForm("submit")}
                   </Button>
 
                   {submitted && (
-                    <div className="bg-green-50 border-2 border-green-500 text-green-700 px-6 py-4 rounded-lg text-center">
+                    <div className="bg-green-50 border-2 border-green-500 text-green-700 px-6 py-4 rounded-xl text-center">
                       <p className="font-semibold">
-                        Ευχαριστούμε! Θα επικοινωνήσουμε μαζί σας σύντομα.
+                        {tForm("successMessage")}
                       </p>
                     </div>
                   )}
-                </Form>
+                </form>
               </div>
             </div>
 
@@ -184,17 +196,17 @@ const ContactFormSection = memo(() => {
             <div data-aos="fade-left">
               <div className="mb-8">
                 <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-                  Ωράριο Λειτουργίας
+                  {tHours("title")}
                 </h2>
-                <div className="w-20 h-1.5 bg-gradient-to-r from-accent-400 to-accent-600 rounded-full mb-6" />
+                <div className="w-20 h-1.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full mb-6" />
                 <p className="text-lg text-gray-700">
-                  Επικοινωνήστε μαζί μας εντός του ωραρίου μας
+                  {tHours("description")}
                 </p>
               </div>
 
-              <div className="bg-gradient-to-br from-accent-50 to-orange-100 rounded-2xl p-8 md:p-10 shadow-lg border-2 border-accent-200">
+              <div className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-gray-200">
                 <div className="flex justify-center mb-8">
-                  <div className="w-20 h-20 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center shadow-lg">
+                  <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center shadow-lg">
                     <ClockIcon className="w-10 h-10 text-white" />
                   </div>
                 </div>
@@ -203,23 +215,21 @@ const ContactFormSection = memo(() => {
                   {schedule.map((item, index) => (
                     <div
                       key={index}
-                      className="flex justify-between items-center pb-6 border-b border-accent-300 last:border-b-0 last:pb-0"
+                      className="flex justify-between items-center pb-6 border-b border-gray-200 last:border-b-0 last:pb-0"
                     >
                       <span className="text-lg md:text-xl font-semibold text-gray-900">
                         {item.day}
                       </span>
-                      <span className="text-lg md:text-xl font-bold text-accent-600">
+                      <span className="text-lg md:text-xl font-bold text-orange-600">
                         {item.hours}
                       </span>
                     </div>
                   ))}
                 </div>
 
-                <div className="p-6 bg-white rounded-xl border-2 border-accent-300 shadow-sm">
+                <div className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm">
                   <p className="text-sm md:text-base text-gray-800 text-center leading-relaxed">
-                    <strong className="text-accent-600">Σημείωση:</strong> Τα
-                    ραντεβού γίνονται μόνο με κράτηση. Επικοινωνήστε μαζί μας
-                    για να κλείσετε το δικό σας ραντεβού!
+                    <strong className="text-orange-600">{tHours("note")}</strong> {tHours("noteText")}
                   </p>
                 </div>
               </div>

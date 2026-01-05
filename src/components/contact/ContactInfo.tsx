@@ -11,19 +11,19 @@ const ContactInfo = memo(() => {
     {
       icon: PhoneIcon,
       title: t("info.phone"),
-      content: "+30 698 983 5114",
+      content: t("info.phoneValue"),
       href: "tel:+306989835114",
     },
     {
       icon: EnvelopeIcon,
       title: t("info.email"),
-      content: "virginia@dogtrainers.gr",
+      content: t("info.emailValue"),
       href: "mailto:virginia@dogtrainers.gr",
     },
     {
       icon: MapPinIcon,
       title: t("info.address"),
-      content: "Τσιμισκή 31, 54624 Θεσσαλονίκη",
+      content: t("info.addressValue"),
       href: null,
     },
   ];
@@ -35,11 +35,11 @@ const ContactInfo = memo(() => {
           {/* Section Header */}
           <div className="text-center mb-12" data-aos="fade-up">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-              Επικοινωνήστε Μαζί Μας
+              {t("info.title")}
             </h2>
-            <div className="w-20 h-1.5 bg-gradient-to-r from-accent-400 to-accent-600 rounded-full mx-auto mb-6" />
+            <div className="w-20 h-1.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full mx-auto mb-6" />
             <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-              Είμαστε εδώ για να σας βοηθήσουμε με τις ανάγκες του σκύλου σας
+              {t("info.description")}
             </p>
           </div>
 
@@ -48,12 +48,12 @@ const ContactInfo = memo(() => {
             {contactItems.map((item, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-accent-50 to-orange-100 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all border border-accent-200"
+                className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-md hover:shadow-xl transition-all border border-orange-200"
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-accent-500 to-accent-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mb-4 shadow-lg">
                     <item.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
@@ -62,7 +62,7 @@ const ContactInfo = memo(() => {
                   {item.href ? (
                     <a
                       href={item.href}
-                      className="text-gray-800 hover:text-accent-600 transition-colors font-medium"
+                      className="text-gray-800 hover:text-orange-600 transition-colors font-medium"
                     >
                       {item.content}
                     </a>
