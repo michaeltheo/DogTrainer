@@ -53,9 +53,9 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`shadow-md sticky top-0 z-50 min-w-[320px] transition-all duration-300 ${
+      className={`shadow-md md:sticky top-0 z-50 min-w-[320px] transition-all duration-300 ${
         isScrolled ? "bg-white/80 backdrop-blur-md" : "bg-white"
-      }`}
+      } ${mobileMenuOpen ? "sticky" : ""}`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 min-w-0">

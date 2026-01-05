@@ -41,17 +41,10 @@ const MobileMenu = memo(({ navItems, pathname, onClose }: MobileMenuProps) => {
 
   return (
     <>
-      {/* Backdrop overlay with opacity animation */}
-      <div
-        className="fixed inset-0 bg-opacity-50 z-40 md:hidden animate-fadeIn"
-        onClick={onClose}
-        aria-hidden="true"
-      />
-
-      {/* Mobile menu content - overlay positioned with slide animation */}
+      {/* Mobile menu content - relative positioned with slide animation */}
       <div
         ref={menuRef}
-        className="fixed top-16 left-0 right-0 bottom-0 z-50 md:hidden bg-white shadow-xl overflow-y-auto animate-slideInRight"
+        className="relative max-h-[calc(100vh-4rem)] z-50 md:hidden bg-white shadow-xl overflow-y-auto animate-slideInRight"
       >
         <div className="px-2 pt-2 pb-3 space-y-1">
           {navItems.map((item) => (
