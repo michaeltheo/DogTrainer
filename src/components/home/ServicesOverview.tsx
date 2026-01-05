@@ -39,7 +39,7 @@ const ServiceCard = memo(
             href={link}
             variant="solid"
             size="lg"
-            className="font-semibold hover:scale-105 transition-transform text-black"
+            className="bg-orange-500 hover:bg-orange-600 font-semibold hover:scale-105 transition-all text-white"
             endContent={
               <svg
                 className="w-5 h-5"
@@ -103,7 +103,7 @@ const ServicesOverview = memo(() => {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
               {t("services.title")}
             </h2>
-            <Divider className="max-w-24 mx-auto bg-accent-500 h-1" />
+            <Divider className="max-w-24 mx-auto bg-orange-500 h-1" />
           </div>
 
           <p

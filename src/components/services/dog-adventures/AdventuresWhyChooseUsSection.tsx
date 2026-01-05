@@ -50,7 +50,7 @@ const AdventuresWhyChooseUsSection = memo(() => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             {t("whyChooseUs.title")}
           </h2>
-          <div className="w-24 h-1.5 bg-linear-to-r from-gray-400 via-gray-600 to-gray-700 mx-auto rounded-full mb-6 shadow-lg" />
+          <div className="w-24 h-1.5 bg-linear-to-r from-orange-400 via-orange-500 to-orange-600 mx-auto rounded-full mb-6 shadow-lg" />
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
             {t("whyChooseUs.subtitle")}
           </p>
@@ -66,20 +66,20 @@ const AdventuresWhyChooseUsSection = memo(() => {
                 data-aos="fade-up"
                 data-aos-delay={index * 100}
               >
-                <Card className="shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border-t-4 border-gray-600 bg-white group">
+                <Card className="shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border-t-4 border-orange-500 bg-white group">
                   <CardBody className="p-8 flex flex-col items-center text-center gap-4">
                     {/* Icon with Background */}
-                    <div className="w-20 h-20 rounded-2xl bg-gray-600 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
+                    <div className="w-20 h-20 rounded-2xl bg-orange-500 flex items-center justify-center shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300">
                       <Icon className="w-10 h-10 text-white" />
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-gray-700 transition-colors duration-300">
+                    <h3 className="text-xl md:text-2xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
                       {t(reason.titleKey)}
                     </h3>
 
                     {/* Divider */}
-                    <div className="w-12 h-1 bg-gray-400 rounded-full group-hover:w-16 transition-all duration-300" />
+                    <div className="w-12 h-1 bg-orange-400 rounded-full group-hover:w-16 transition-all duration-300" />
 
                     {/* Description */}
                     <p className="text-gray-700 leading-relaxed">

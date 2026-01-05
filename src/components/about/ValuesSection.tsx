@@ -53,14 +53,14 @@ const ValueCard = memo(
 
     return (
       <Card
-        className="shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border-t-3 border-accent-500"
+        className="shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 h-full border-t-3 border-orange-500"
         data-aos="fade-up"
         data-aos-duration="800"
       >
         <CardBody className="p-6 md:p-8 flex flex-col items-center text-center gap-4 overflow-hidden">
           {/* Icon with Background */}
-          <div className="w-16 h-16 rounded-xl bg-accent-100 flex items-center justify-center shadow-md">
-            <Icon className="w-8 h-8 text-gray-900 stroke-2" />
+          <div className="w-16 h-16 rounded-xl bg-orange-100 flex items-center justify-center shadow-md">
+            <Icon className="w-8 h-8 text-orange-600 stroke-2" />
           </div>
 
           {/* Title */}
@@ -89,7 +89,7 @@ const ValuesSection = memo(() => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             {t("values.title")}
           </h2>
-          <div className="w-24 h-1 bg-linear-to-r from-accent-400 to-accent-600 mx-auto rounded-full mb-6" />
+          <div className="w-24 h-1 bg-linear-to-r from-orange-400 to-orange-600 mx-auto rounded-full mb-6" />
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto">
             {t("values.subtitle")}
           </p>
