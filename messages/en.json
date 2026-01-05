@@ -366,13 +366,6 @@
           "feature2": "Group outings every weekend",
           "feature3": "Suitable for all ages"
         },
-        "beach": {
-          "title": "Beach Adventures",
-          "description": "Fun in the sand and water. Perfect for summer days with your dog.",
-          "feature1": "Play in sand and water",
-          "feature2": "Swimming and exercise",
-          "feature3": "Socialization with other dogs"
-        },
         "social": {
           "title": "Group Meetups",
           "description": "Organized dog meetups in parks and special areas for safe socialization.",
@@ -419,7 +412,6 @@
       },
       "features": {
         "hiking": "Group Hiking Trips",
-        "beach": "Beach Adventures",
         "socialization": "Safe Socialization",
         "exercise": "Physical & Mental Exercise"
       }

@@ -5,7 +5,6 @@ import { useTranslations } from "next-intl";
 import { Card, CardBody } from "@heroui/react";
 import {
   MapIcon,
-  SunIcon,
   UserGroupIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
@@ -26,16 +25,6 @@ const adventures: Adventure[] = [
       "types.hiking.feature1",
       "types.hiking.feature2",
       "types.hiking.feature3",
-    ],
-  },
-  {
-    icon: SunIcon,
-    titleKey: "types.beach.title",
-    descriptionKey: "types.beach.description",
-    featuresKey: [
-      "types.beach.feature1",
-      "types.beach.feature2",
-      "types.beach.feature3",
     ],
   },
   {
@@ -139,7 +128,7 @@ const AdventuresTypesSection = memo(() => {
         </div>
 
         {/* Adventures Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {adventures.map((adventure, index) => (
             <AdventureCard
               key={adventure.titleKey}

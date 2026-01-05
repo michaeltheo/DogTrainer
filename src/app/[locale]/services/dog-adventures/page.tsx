@@ -24,7 +24,6 @@ export async function generateMetadata({
           "ορειβασία με σκύλους",
           "κοινωνικοποίηση σκύλων",
           "ομαδικές βόλτες σκύλων",
-          "εκδρομές στην παραλία με σκύλο",
           "περιπέτειες σκύλων φύση",
           "Θεσσαλονίκη",
         ]
@@ -36,7 +35,6 @@ export async function generateMetadata({
           "mountain hiking with dogs",
           "dog socialization",
           "group dog walks",
-          "beach trips for dogs",
           "dog nature activities",
           "Thessaloniki",
         ];
