@@ -1,8 +1,5 @@
-"use client";
-
 import { memo } from "react";
 import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/routing";
 import Image from "next/image";
 
 const AboutSection = memo(() => {
