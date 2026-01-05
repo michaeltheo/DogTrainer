@@ -421,7 +421,7 @@
     "title": "Contact Us",
     "metaTitle": "Contact Us | Book Your Dog Training Consultation",
     "metaDescription": "Get in touch for professional dog training, sitting, or adventure services. Free consultation available. Call or email us today.",
-    "subtitle": "Get in touch to discuss your dog's needs",
+    "subtitle": "Have questions or need help? We're here to listen and discuss your dog's needs",
     "form": {
       "name": "Your Name",
       "email": "Email Address",
@@ -436,7 +436,7 @@
       "address": "Address",
       "phone": "Phone",
       "email": "Email",
-      "hours": "Hours"
+      "hours": "Opening Hours"
     }
   },
   "testimonials": {

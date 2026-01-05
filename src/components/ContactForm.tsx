@@ -2,6 +2,7 @@
 
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
+import { Input, Textarea, Select, SelectItem, Button } from '@heroui/react';
 
 export default function ContactForm() {
   const t = useTranslations('contact.form');
@@ -14,128 +15,166 @@ export default function ContactForm() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you would normally send the form data to your backend
+    setIsSubmitting(true);
+
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
     console.log('Form submitted:', formData);
+
     setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 3000);
+    setIsSubmitting(false);
+
+    // Reset form after 3 seconds
+    setTimeout(() => {
+      setSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        dogName: '',
+        service: '',
+        message: '',
+      });
+    }, 3000);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
+  const services = [
+    { key: "training", label: "Dog Training - Εκπαίδευση Σκύλων" },
+    { key: "sitting", label: "Dog Sitting - Φύλαξη Σκύλων" },
+    { key: "adventures", label: "Dog Adventures - Εκδρομές στη Φύση" },
+  ];
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('name')} *
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          required
-          value={formData.name}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-        />
-      </div>
+    <section className="py-16 md:py-24 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-2xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12" data-aos="fade-up">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+              Στείλτε μας Μήνυμα
+            </h2>
+            <div className="w-20 h-1.5 bg-linear-to-r from-accent-400 to-accent-600 rounded-full mx-auto mb-6" />
+            <p className="text-lg text-gray-600">
+              Συμπληρώστε τη φόρμα και θα επικοινωνήσουμε μαζί σας το συντομότερο
+            </p>
+          </div>
 
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('email')} *
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          value={formData.email}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-        />
-      </div>
+          {/* Form */}
+          <div
+            className="bg-white rounded-2xl p-8 md:p-10 shadow-lg"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <Input
+                type="text"
+                label={t('name')}
+                name="name"
+                isRequired
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                variant="bordered"
+                classNames={{
+                  input: "text-base",
+                  inputWrapper: "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
+                }}
+              />
 
-      <div>
-        <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('phone')}
-        </label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          value={formData.phone}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-        />
-      </div>
+              <Input
+                type="email"
+                label={t('email')}
+                name="email"
+                isRequired
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                variant="bordered"
+                classNames={{
+                  input: "text-base",
+                  inputWrapper: "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
+                }}
+              />
 
-      <div>
-        <label htmlFor="dogName" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('dogName')}
-        </label>
-        <input
-          type="text"
-          id="dogName"
-          name="dogName"
-          value={formData.dogName}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-        />
-      </div>
+              <Input
+                type="tel"
+                label={t('phone')}
+                name="phone"
+                value={formData.phone}
+                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                variant="bordered"
+                classNames={{
+                  input: "text-base",
+                  inputWrapper: "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
+                }}
+              />
 
-      <div>
-        <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('service')} *
-        </label>
-        <select
-          id="service"
-          name="service"
-          required
-          value={formData.service}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-        >
-          <option value="">{t('selectService')}</option>
-          <option value="training">Dog Training</option>
-          <option value="sitting">Dog Sitting</option>
-          <option value="adventures">Dog Adventures</option>
-        </select>
-      </div>
+              <Input
+                type="text"
+                label={t('dogName')}
+                name="dogName"
+                value={formData.dogName}
+                onChange={(e) => setFormData({ ...formData, dogName: e.target.value })}
+                variant="bordered"
+                classNames={{
+                  input: "text-base",
+                  inputWrapper: "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
+                }}
+              />
 
-      <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-          {t('message')} *
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          required
-          rows={5}
-          value={formData.message}
-          onChange={handleChange}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-        />
-      </div>
+              <Select
+                label={t('service')}
+                name="service"
+                isRequired
+                placeholder={t('selectService')}
+                selectedKeys={formData.service ? [formData.service] : []}
+                onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                variant="bordered"
+                classNames={{
+                  trigger: "border-gray-300 hover:border-accent-500 data-[focus=true]:border-accent-500",
+                }}
+              >
+                {services.map((service) => (
+                  <SelectItem key={service.key}>
+                    {service.label}
+                  </SelectItem>
+                ))}
+              </Select>
 
-      <button
-        type="submit"
-        className="w-full bg-accent-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-600 transition-colors shadow-md"
-      >
-        {t('submit')}
-      </button>
+              <Textarea
+                label={t('message')}
+                name="message"
+                isRequired
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                variant="bordered"
+                minRows={5}
+                classNames={{
+                  input: "text-base",
+                  inputWrapper: "border-gray-300 hover:border-accent-500 focus-within:!border-accent-500",
+                }}
+              />
 
-      {submitted && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
-          Thank you! We'll get back to you soon.
+              <Button
+                type="submit"
+                className="w-full bg-linear-to-r from-accent-500 to-accent-600 text-white font-semibold text-lg py-6 shadow-lg hover:shadow-xl transition-all"
+                isLoading={isSubmitting}
+                size="lg"
+              >
+                {t('submit')}
+              </Button>
+
+              {submitted && (
+                <div className="bg-green-50 border-2 border-green-500 text-green-700 px-6 py-4 rounded-lg text-center">
+                  <p className="font-semibold">Ευχαριστούμε! Θα επικοινωνήσουμε μαζί σας σύντομα.</p>
+                </div>
+              )}
+            </form>
+          </div>
         </div>
-      )}
-    </form>
+      </div>
+    </section>
   );
 }
