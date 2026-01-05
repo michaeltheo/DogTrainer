@@ -16,7 +16,7 @@ const HeroSection = memo(() => {
           alt="Επαγγελματική εκπαίδευση σκύλων Θεσσαλονίκη - Professional dog training Thessaloniki"
           fill
           priority
-          quality={85}
+          quality={75}
           sizes="100vw"
           className="object-cover"
         />

@@ -71,6 +71,7 @@ export default async function HomePage({
     description: t("metaDescription"),
     locale,
     phone: "+306989835114",
+    email: "virginia@dogtrainers.gr",
     address: {
       street: "",
       city: "Thessaloniki",
@@ -78,6 +79,10 @@ export default async function HomePage({
       postalCode: "",
       country: "GR",
     },
+    openingHours: [
+      "Monday,Tuesday,Wednesday,Thursday,Friday 09:00-18:00",
+      "Saturday 09:00-14:00",
+    ],
   });
 
   return (

@@ -1,16 +1,17 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from "next";
 
-const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || 'https://yourdomain.com';
+const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || "https://dog-trainer.vercel.app";
 
-const locales = ['en', 'el'];
+const locales = ["en", "el"] as const;
+
 const pages = [
-  '',
-  '/about',
-  '/services',
-  '/services/dog-training',
-  '/services/dog-sitting',
-  '/services/dog-adventures',
-  '/contact',
+  { path: "", priority: 1.0, changeFrequency: "weekly" as const },
+  { path: "/about", priority: 0.9, changeFrequency: "monthly" as const },
+  { path: "/services", priority: 0.9, changeFrequency: "weekly" as const },
+  { path: "/services/dog-training", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/services/dog-sitting", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/services/dog-adventures", priority: 0.8, changeFrequency: "weekly" as const },
+  { path: "/contact", priority: 0.7, changeFrequency: "monthly" as const },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,14 +20,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   pages.forEach((page) => {
     locales.forEach((locale) => {
       sitemapEntries.push({
-        url: `${DOMAIN}/${locale}${page}`,
+        url: `${DOMAIN}/${locale}${page.path}`,
         lastModified: new Date(),
-        changeFrequency: page === '' ? 'daily' : 'weekly',
-        priority: page === '' ? 1 : 0.8,
+        changeFrequency: page.changeFrequency,
+        priority: page.priority,
         alternates: {
           languages: {
-            en: `${DOMAIN}/en${page}`,
-            el: `${DOMAIN}/el${page}`,
+            en: `${DOMAIN}/en${page.path}`,
+            el: `${DOMAIN}/el${page.path}`,
           },
         },
       });
