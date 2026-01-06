@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { usePathname } from "@/i18n/routing";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Logo from "./Logo";
 import NavItem from "./NavItem";
 import MobileMenuButton from "./MobileMenuButton";
@@ -15,6 +15,7 @@ export default function Navigation() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const mobileMenuButtonRef = useRef<HTMLDivElement>(null);
 
   const navItems = useMemo(
     () => [
@@ -99,7 +100,10 @@ export default function Navigation() {
           </div>
 
           {/* Mobile menu button */}
-          <div className="flex items-center md:hidden shrink-0">
+          <div
+            ref={mobileMenuButtonRef}
+            className="flex items-center md:hidden shrink-0"
+          >
             <MobileMenuButton
               isOpen={mobileMenuOpen}
               onClick={toggleMobileMenu}
@@ -114,6 +118,7 @@ export default function Navigation() {
           navItems={navItems}
           pathname={pathname}
           onClose={closeMobileMenu}
+          buttonRef={mobileMenuButtonRef}
         />
       )}
     </nav>

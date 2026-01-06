@@ -28,8 +28,8 @@ export const contactLinks = [
   {
     name: "Email",
     icon: EnvelopeIcon,
-    href: "mailto:info@dogtraining.com",
-    value: "info@dogtraining.com",
+    href: "mailto:virginia@dogtrainers.gr",
+    value: "virginia@dogtrainers.gr",
     color: "hover:text-blue-600",
   },
   {
