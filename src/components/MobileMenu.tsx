@@ -17,7 +17,7 @@ interface MobileMenuProps {
   navItems: NavItem[];
   pathname: string;
   onClose: () => void;
-  buttonRef: React.RefObject<HTMLDivElement>;
+  buttonRef: React.RefObject<HTMLDivElement | null>;
 }
 
 const MobileMenu = memo(
