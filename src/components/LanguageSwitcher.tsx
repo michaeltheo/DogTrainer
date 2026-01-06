@@ -27,10 +27,10 @@ const LanguageButton = memo(
       <button
         onClick={onClick}
         disabled={isPending}
-        className={`relative  transition-all duration-300 transform hover:scale-110 overflow-hidden ${
+        className={`relative w-10 h-6 transition-all duration-300 transform hover:scale-130 overflow-hidden  ${
           isActive
-            ? " shadow-md scale-105"
-            : "opacity-50 hover:opacity-100 grayscale hover:grayscale-0"
+            ? ""
+            : "opacity-50 hover:opacity-90 grayscale hover:grayscale-0"
         }`}
         aria-label={ariaLabel}
         title={ariaLabel}
@@ -38,9 +38,8 @@ const LanguageButton = memo(
         <Image
           src={flag}
           alt={`${locale} flag`}
-          width={32}
-          height={24}
-          className="rounded-md"
+          fill
+          className="object-scale-down"
         />
       </button>
     );
