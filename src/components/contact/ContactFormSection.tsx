@@ -5,33 +5,39 @@ import { useTranslations } from "next-intl";
 import { useState } from "react";
 import { Button } from "@heroui/react";
 import { ClockIcon } from "@heroicons/react/24/solid";
+import { useForm } from "react-hook-form";
+import useWeb3Forms from "@web3forms/react";
 
 const ContactFormSection = memo(() => {
   const tForm = useTranslations("contact.form");
   const tHours = useTranslations("contact.hours");
-  const [submitted, setSubmitted] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [result, setResult] = useState<string>("");
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  const { register, reset, handleSubmit, formState: { isSubmitting } } = useForm();
 
-    // Get form data
-    const formData = Object.fromEntries(new FormData(e.currentTarget));
+  const { submit: onSubmit } = useWeb3Forms({
+    access_key: "af79f74c-6252-4ba0-8016-bc4da25495e2",
+    settings: {
+      from_name: "Dog Trainers Website",
+      subject: "New Contact Form Submission",
+    },
+    onSuccess: (msg) => {
+      setIsSuccess(true);
+      setResult(msg);
+      reset();
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log("Form submitted:", formData);
-
-    setSubmitted(true);
-    setIsSubmitting(false);
-
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setSubmitted(false);
-      e.currentTarget.reset();
-    }, 3000);
-  };
+      // Reset success message after 5 seconds
+      setTimeout(() => {
+        setIsSuccess(false);
+        setResult("");
+      }, 5000);
+    },
+    onError: (msg) => {
+      setIsSuccess(false);
+      setResult(msg);
+    },
+  });
 
   const services = [
     { key: "training", label: tForm("serviceTraining") },
@@ -65,7 +71,7 @@ const ContactFormSection = memo(() => {
               <div className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-gray-200">
                 <form
                   className="flex flex-col gap-6"
-                  onSubmit={handleSubmit}
+                  onSubmit={handleSubmit(onSubmit)}
                 >
                   <div className="flex flex-col gap-2">
                     <label
@@ -77,10 +83,9 @@ const ContactFormSection = memo(() => {
                     <input
                       id="name"
                       type="text"
-                      name="name"
-                      required
                       placeholder={tForm("namePlaceholder")}
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                      {...register("name", { required: true })}
                     />
                   </div>
 
@@ -94,10 +99,9 @@ const ContactFormSection = memo(() => {
                     <input
                       id="email"
                       type="email"
-                      name="email"
-                      required
                       placeholder={tForm("emailPlaceholder")}
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                      {...register("email", { required: true })}
                     />
                   </div>
 
@@ -111,9 +115,9 @@ const ContactFormSection = memo(() => {
                     <input
                       id="phone"
                       type="tel"
-                      name="phone"
                       placeholder={tForm("phonePlaceholder")}
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                      {...register("phone")}
                     />
                   </div>
 
@@ -127,9 +131,9 @@ const ContactFormSection = memo(() => {
                     <input
                       id="dogName"
                       type="text"
-                      name="dogName"
                       placeholder={tForm("dogNamePlaceholder")}
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                      {...register("dogName")}
                     />
                   </div>
 
@@ -142,9 +146,8 @@ const ContactFormSection = memo(() => {
                     </label>
                     <select
                       id="service"
-                      name="service"
-                      required
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900"
+                      {...register("service", { required: true })}
                     >
                       <option value="">{tForm("selectService")}</option>
                       {services.map((service) => (
@@ -164,11 +167,10 @@ const ContactFormSection = memo(() => {
                     </label>
                     <textarea
                       id="message"
-                      name="message"
-                      required
                       rows={5}
                       placeholder={tForm("messagePlaceholder")}
                       className="px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-orange-500 transition-colors bg-white text-gray-900 resize-none"
+                      {...register("message", { required: true })}
                     />
                   </div>
 
@@ -181,10 +183,14 @@ const ContactFormSection = memo(() => {
                     {tForm("submit")}
                   </Button>
 
-                  {submitted && (
-                    <div className="bg-green-50 border-2 border-green-500 text-green-700 px-6 py-4 rounded-xl text-center">
+                  {result && (
+                    <div className={`${
+                      isSuccess
+                        ? "bg-green-50 border-green-500 text-green-700"
+                        : "bg-red-50 border-red-500 text-red-700"
+                    } border-2 px-6 py-4 rounded-xl text-center`}>
                       <p className="font-semibold">
-                        {tForm("successMessage")}
+                        {isSuccess ? tForm("successMessage") : result}
                       </p>
                     </div>
                   )}
