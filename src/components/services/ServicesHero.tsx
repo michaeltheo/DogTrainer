@@ -12,7 +12,7 @@ const ServicesHero = memo(() => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/dog-trainer-happy-dog.jpg"
+          src="/dog-trainer-happy-dog.png"
           alt="Επαγγελματικές υπηρεσίες εκπαίδευσης και φροντίδας σκύλων - Professional dog training and care services"
           fill
           priority

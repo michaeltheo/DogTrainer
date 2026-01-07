@@ -12,7 +12,7 @@ const AboutHero = memo(() => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/dog-trainer-happy-dog.jpg"
+          src="/dog-trainer-happy-dog.png"
           alt="Επαγγελματικός εκπαιδευτής σκύλων με ευτυχισμένο σκύλο - Professional dog trainer with happy dog"
           fill
           priority
@@ -25,7 +25,11 @@ const AboutHero = memo(() => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 text-center text-white py-20">
-        <div className="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+        <div
+          className="max-w-4xl mx-auto"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 drop-shadow-2xl leading-tight">
             {t("hero.title")}
           </h1>
