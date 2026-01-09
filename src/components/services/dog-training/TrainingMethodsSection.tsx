@@ -17,9 +17,9 @@ const TrainingMethodsSection = memo(() => {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <div className="relative h-100 md:h-125 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/dog_trainer_with_dog.jpg"
+                src="/dog-training-main.jpg"
                 alt="Θετική ενίσχυση εκπαίδευσης σκύλων - Positive reinforcement dog training"
                 fill
                 quality={75}

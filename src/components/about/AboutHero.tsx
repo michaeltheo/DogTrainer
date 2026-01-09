@@ -10,9 +10,9 @@ const AboutHero = memo(() => {
   return (
     <section className="relative min-h-100 md:min-h-125 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 aspect-auto">
         <Image
-          src="/dog-trainer-happy-dog.png"
+          src="/who-we-are-hero.jpg"
           alt="Επαγγελματικός εκπαιδευτής σκύλων με ευτυχισμένο σκύλο - Professional dog trainer with happy dog"
           fill
           priority

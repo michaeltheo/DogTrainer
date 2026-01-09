@@ -1,6 +1,5 @@
 import { memo, useCallback, useEffect, useRef } from "react";
 import { Link } from "@/i18n/routing";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 interface SubMenuItem {
   href: string;
@@ -61,7 +60,7 @@ const MobileMenu = memo(
                   href={item.href}
                   className={`block px-4 py-3 rounded-lg text-base font-bold transition-colors ${
                     pathname === item.href
-                      ? "text-orange-300"
+                      ? "text-orange-500"
                       : "text-gray-700 hover:text-primary-700 hover:bg-primary-50"
                   }`}
                   onClick={handleLinkClick}
@@ -88,9 +87,6 @@ const MobileMenu = memo(
                 )}
               </div>
             ))}
-            <div className="px-3 py-2">
-              <LanguageSwitcher />
-            </div>
           </div>
         </div>
       </>

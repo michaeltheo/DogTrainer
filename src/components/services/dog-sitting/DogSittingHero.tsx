@@ -10,15 +10,15 @@ const DogSittingHero = memo(() => {
   return (
     <section className="relative min-h-100 md:min-h-125 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 aspect-square">
         <Image
-          src="/dog_trainer_with_dog.jpg"
+          src="/dog-sitting-hero.jpg"
           alt="Φύλαξη σκύλων Θεσσαλονίκη - Dog sitting Thessaloniki"
           fill
           priority
           quality={75}
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/50 to-black/70" />
       </div>

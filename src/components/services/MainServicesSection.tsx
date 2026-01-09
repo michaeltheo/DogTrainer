@@ -16,7 +16,7 @@ interface MainService {
 
 const mainServices: MainService[] = [
   {
-    image: "/positive-dog-training.jpg",
+    image: "/dog-training-out.jpg",
     titleKey: "main.training.title",
     descriptionKey: "main.training.description",
     href: "/services/dog-training",
@@ -28,7 +28,7 @@ const mainServices: MainService[] = [
     ],
   },
   {
-    image: "/dog_trainer_with_dog.jpg",
+    image: "/dog-sitting-outside.jpg",
     titleKey: "main.sitting.title",
     descriptionKey: "main.sitting.description",
     href: "/services/dog-sitting",
@@ -63,7 +63,9 @@ const MainServiceCard = memo<MainServiceCardProps>(({ service, index }) => {
   const router = useRouter();
   const locale = useLocale();
   const isReversed = index % 2 !== 0;
-  const showCallButton = service.titleKey === "main.training.title" || service.titleKey === "main.sitting.title";
+  const showCallButton =
+    service.titleKey === "main.training.title" ||
+    service.titleKey === "main.sitting.title";
 
   const handleClick = useCallback(() => {
     router.push(`/${locale}${service.href}`);
@@ -83,7 +85,7 @@ const MainServiceCard = memo<MainServiceCardProps>(({ service, index }) => {
     >
       {/* Image */}
       <div className={`relative ${isReversed ? "lg:order-2" : "lg:order-1"}`}>
-        <div className="relative h-100 md:h-125 rounded-3xl overflow-hidden shadow-2xl group">
+        <div className="relative aspect-square rounded-3xl overflow-hidden shadow-2xl group">
           <Image
             src={service.image}
             alt={t(service.titleKey)}

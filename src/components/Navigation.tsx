@@ -7,7 +7,7 @@ import Logo from "./Logo";
 import NavItem from "./NavItem";
 import MobileMenuButton from "./MobileMenuButton";
 import MobileMenu from "./MobileMenu";
-import LanguageSwitcher from "./LanguageSwitcher";
+import LanguageDropdown from "./LanguageDropdown";
 import { socialLinks } from "@/constants/socialLinks";
 
 export default function Navigation() {
@@ -54,15 +54,15 @@ export default function Navigation() {
 
   return (
     <nav
-      className={`shadow-md md:sticky top-0 z-50 min-w-[320px] transition-all duration-300 ${
+      className={`shadow-md sticky top-0 z-50 min-w-[320px] transition-all duration-300 ${
         isScrolled ? "bg-white/80 backdrop-blur-md" : "bg-white"
-      } ${mobileMenuOpen ? "sticky" : ""}`}
+      }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16 min-w-0">
           <div className="flex items-center gap-4 min-w-0 shrink">
             <Logo />
-            {/* Social Icons */}
+            {/* Social Icons and Language Dropdown (Mobile) */}
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
@@ -81,22 +81,28 @@ export default function Navigation() {
                   </a>
                 );
               })}
+              {/* Language Dropdown - Mobile Only */}
+              <div className="md:hidden">
+                <LanguageDropdown />
+              </div>
             </div>
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex md:items-center md:space-x-4 lg:space-x-8 shrink-0">
-            {navItems.map((item) => (
-              <NavItem
-                key={item.href}
-                href={item.href}
-                label={item.label}
-                isActive={pathname === item.href}
-                submenu={item.submenu}
-                pathname={pathname}
-              />
-            ))}
-            <LanguageSwitcher />
+          <div className="hidden md:flex md:items-center md:gap-4 lg:gap-8 shrink-0">
+            <div className="flex items-center md:space-x-4 lg:space-x-8">
+              {navItems.map((item) => (
+                <NavItem
+                  key={item.href}
+                  href={item.href}
+                  label={item.label}
+                  isActive={pathname === item.href}
+                  submenu={item.submenu}
+                  pathname={pathname}
+                />
+              ))}
+            </div>
+            <LanguageDropdown />
           </div>
 
           {/* Mobile menu button */}
