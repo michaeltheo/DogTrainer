@@ -14,13 +14,18 @@ const ContactFormSection = memo(() => {
   const [isSuccess, setIsSuccess] = useState(false);
   const [result, setResult] = useState<string>("");
 
-  const { register, reset, handleSubmit, formState: { isSubmitting } } = useForm();
+  const {
+    register,
+    reset,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm();
 
   const { submit: onSubmit } = useWeb3Forms({
-    access_key: "af79f74c-6252-4ba0-8016-bc4da25495e2",
+    access_key: "2d3e61d8-36c7-4d8e-8c38-6ca063be1230",
     settings: {
-      from_name: "Dog Trainers Website",
-      subject: "New Contact Form Submission",
+      from_name: "Cobrelious Project Website",
+      subject: "New Contact from Cobrelious Website",
     },
     onSuccess: (msg) => {
       setIsSuccess(true);
@@ -63,9 +68,7 @@ const ContactFormSection = memo(() => {
                   {tForm("title")}
                 </h2>
                 <div className="w-20 h-1.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full mb-6" />
-                <p className="text-lg text-gray-700">
-                  {tForm("description")}
-                </p>
+                <p className="text-lg text-gray-700">{tForm("description")}</p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-gray-200">
@@ -184,11 +187,13 @@ const ContactFormSection = memo(() => {
                   </Button>
 
                   {result && (
-                    <div className={`${
-                      isSuccess
-                        ? "bg-green-50 border-green-500 text-green-700"
-                        : "bg-red-50 border-red-500 text-red-700"
-                    } border-2 px-6 py-4 rounded-xl text-center`}>
+                    <div
+                      className={`${
+                        isSuccess
+                          ? "bg-green-50 border-green-500 text-green-700"
+                          : "bg-red-50 border-red-500 text-red-700"
+                      } border-2 px-6 py-4 rounded-xl text-center`}
+                    >
                       <p className="font-semibold">
                         {isSuccess ? tForm("successMessage") : result}
                       </p>
@@ -205,9 +210,7 @@ const ContactFormSection = memo(() => {
                   {tHours("title")}
                 </h2>
                 <div className="w-20 h-1.5 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full mb-6" />
-                <p className="text-lg text-gray-700">
-                  {tHours("description")}
-                </p>
+                <p className="text-lg text-gray-700">{tHours("description")}</p>
               </div>
 
               <div className="bg-white rounded-2xl p-8 md:p-10 shadow-xl border border-gray-200">
@@ -235,7 +238,10 @@ const ContactFormSection = memo(() => {
 
                 <div className="p-6 bg-gray-50 rounded-xl border border-gray-200 shadow-sm">
                   <p className="text-sm md:text-base text-gray-800 text-center leading-relaxed">
-                    <strong className="text-orange-600">{tHours("note")}</strong> {tHours("noteText")}
+                    <strong className="text-orange-600">
+                      {tHours("note")}
+                    </strong>{" "}
+                    {tHours("noteText")}
                   </p>
                 </div>
               </div>
