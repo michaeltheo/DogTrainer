@@ -28,7 +28,7 @@ const mainServices: MainService[] = [
     ],
   },
   {
-    image: "/dog_trainer_with_dog.jpg",
+    image: "/dog-sitting-outside.jpg",
     titleKey: "main.sitting.title",
     descriptionKey: "main.sitting.description",
     href: "/services/dog-sitting",
