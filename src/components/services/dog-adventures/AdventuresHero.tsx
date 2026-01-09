@@ -10,9 +10,9 @@ const AdventuresHero = memo(() => {
   return (
     <section className="relative min-h-100 md:min-h-125 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 aspect-auto -mt-50">
         <Image
-          src="/dog-mountain-adventures.png"
+          src="/dog-adventures-hero.JPG"
           alt="Εκδρομές σκύλων στη φύση - Dog mountain adventures"
           fill
           priority
