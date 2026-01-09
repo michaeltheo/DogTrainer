@@ -17,9 +17,9 @@ const AdventuresBenefitsSection = memo(() => {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <div className="relative h-100 md:h-125 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/dog_trainer_with_dog.jpg"
+                src="/dog-adventures-mountain.jpg"
                 alt="Οφέλη εκδρομών σκύλων - Dog adventures benefits"
                 fill
                 quality={75}
