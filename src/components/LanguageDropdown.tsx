@@ -64,19 +64,8 @@ const LanguageDropdown = memo(() => {
           isDisabled={isPending}
           size="sm"
         >
-          <Globe className="h-4 w-4 text-orange-500 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" />
-          <span className="hidden sm:flex items-center gap-2">
-            <span className="px-2 py-0.5 text-xs font-bold text-white bg-orange-500 rounded">
-              {currentLangInfo.code}
-            </span>
-            <span className="text-sm font-medium text-gray-800">
-              {currentLangInfo.nativeName}
-            </span>
-          </span>
-          <span className="px-2 py-0.5 text-xs font-bold text-white bg-orange-500 rounded sm:hidden">
-            {currentLangInfo.code}
-          </span>
-          <ChevronDown className="h-3 w-3 text-gray-600 transition-transform duration-300 group-data-[state=open]:rotate-180 flex-shrink-0" />
+          <Globe className="h-4 w-4 text-orange-500 group-hover:scale-110 transition-transform duration-300 shrink-0" />
+          <ChevronDown className="h-3 w-3 text-gray-600 transition-transform duration-300 group-data-[state=open]:rotate-180 shrink-0" />
         </Button>
       </DropdownTrigger>
 
@@ -97,9 +86,7 @@ const LanguageDropdown = memo(() => {
             <DropdownItem
               key={lang}
               className={`py-3 px-4 ${
-                isActive
-                  ? "bg-orange-50 font-semibold"
-                  : "hover:bg-gray-50"
+                isActive ? "bg-orange-50 font-semibold" : "hover:bg-gray-50"
               }`}
               classNames={{
                 base: "data-[hover=true]:bg-gray-100",
