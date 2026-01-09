@@ -107,7 +107,7 @@ const TeamDogsSection = memo(() => {
         <div className="text-center mb-12 md:mb-16" data-aos="fade-up">
           <div className="inline-block mb-4">
             <div className="bg-accent-100 text-gray-900 px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider">
-              Meet The Team
+              Dog Team
             </div>
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
