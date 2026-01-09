@@ -55,17 +55,11 @@ const DogCard = memo<DogCardProps>(({ dog }) => {
         {/* Elegant Gradient Overlay */}
         <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-500" />
 
-        {/* Floating Name Badge */}
-        <div className="absolute top-6 left-6">
-          <div className="bg-white/95 backdrop-blur-sm px-6 py-3 rounded-full shadow-lg">
-            <h3 className="text-2xl font-bold text-gray-900">{dog.name}</h3>
-          </div>
-        </div>
-
         {/* Title at Bottom */}
         <div className="absolute bottom-6 left-6 right-6">
           <div className="px-6 py-4">
-            <p className="text-lg md:text-xl font-bold text-white">
+            <h3 className="text-lg  font-bold text-white mb-2">{dog.name}</h3>
+            <p className="text-lg font-semibold text-white/70">
               {t(dog.titleKey)}
             </p>
           </div>
