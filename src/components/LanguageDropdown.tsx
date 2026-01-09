@@ -37,8 +37,6 @@ const LanguageDropdown = memo(() => {
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
 
-  const currentLangInfo = languages[locale];
-
   const handleLanguageChange = useCallback(
     (newLocale: Locale) => {
       if (locale !== newLocale) {
@@ -59,7 +57,7 @@ const LanguageDropdown = memo(() => {
       <DropdownTrigger>
         <Button
           variant="light"
-          className="relative group hover:bg-orange-50 transition-all duration-300 gap-2 px-3 min-w-0"
+          className="relative group hover:bg-orange-50 hover:cursor-pointer transition-all duration-300 gap-2 px-3 min-w-0"
           aria-label="Select language"
           isDisabled={isPending}
           size="sm"
@@ -93,7 +91,7 @@ const LanguageDropdown = memo(() => {
               }}
             >
               <div className="flex items-center gap-3">
-                <span className="px-2.5 py-1 text-xs font-bold text-white bg-orange-500 rounded shadow-sm min-w-[40px] text-center">
+                <span className="px-2.5 py-1 text-xs font-bold text-white bg-orange-500 rounded shadow-sm min-w-10 text-center">
                   {langInfo.code}
                 </span>
                 <div className="flex flex-col">
