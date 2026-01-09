@@ -17,9 +17,9 @@ const SittingMethodsSection = memo(() => {
             data-aos="fade-right"
             data-aos-duration="1000"
           >
-            <div className="relative h-100 md:h-125 rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-square w-full rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/dog_trainer_with_dog.jpg"
+                src="/dog-sitting-trainer.JPG"
                 alt="Επαγγελματική φύλαξη σκύλων - Professional dog sitting"
                 fill
                 quality={75}

@@ -12,7 +12,7 @@ const DogTrainingHero = memo(() => {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/positive-dog-training.jpg"
+          src="/dog-training-hero-image.JPG"
           alt="Επαγγελματική εκπαίδευση σκύλων Θεσσαλονίκη - Professional dog training Thessaloniki"
           fill
           priority
