@@ -1,5 +1,4 @@
-import { setRequestLocale } from "next-intl/server";
-import { getTranslations } from "next-intl/server";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import { generateMetadata as genMeta } from "@/lib/seo";
 import AboutHero from "@/components/about/AboutHero";
 import MissionSection from "@/components/about/MissionSection";

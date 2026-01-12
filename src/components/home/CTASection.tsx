@@ -1,11 +1,10 @@
 "use client";
 
 import { memo, useCallback } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Button } from "@heroui/react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useLocale } from "next-intl";
 
 const CTASection = memo(() => {
   const t = useTranslations("cta");
