@@ -9,7 +9,8 @@ export interface SEOConfig {
   keywords?: string[];
 }
 
-const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || "https://dog-trainer.vercel.app";
+const DOMAIN =
+  process.env.NEXT_PUBLIC_DOMAIN || "https://dog-trainer.vercel.app";
 
 export function generateMetadata({
   title,
@@ -19,9 +20,7 @@ export function generateMetadata({
   images = [],
   keywords = [],
 }: SEOConfig): Metadata {
-  const alternateLocale = locale === "en" ? "el" : "en";
   const canonicalUrl = `${DOMAIN}/${locale}${path}`;
-  const alternateUrl = `${DOMAIN}/${alternateLocale}${path}`;
 
   return {
     title,
@@ -105,7 +104,6 @@ export interface LocalBusinessSchema {
 export function generateLocalBusinessSchema({
   name,
   description,
-  locale,
   address,
   phone,
   email,

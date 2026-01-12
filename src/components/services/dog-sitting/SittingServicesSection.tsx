@@ -141,7 +141,11 @@ const SittingServicesSection = memo(() => {
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => (
-            <ServiceCard key={service.titleKey} service={service} index={index} />
+            <ServiceCard
+              key={service.titleKey}
+              service={service}
+              index={index}
+            />
           ))}
         </div>
       </div>
